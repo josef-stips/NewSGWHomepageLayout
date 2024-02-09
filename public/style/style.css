@@ -34,6 +34,17 @@ html {
 
 /* default style */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .hover-item {
     transition: color var(--transition-time) ease-out;
 }
@@ -50,13 +61,16 @@ html {
 .site-header {
     position: relative;
     width: 100%;
-    height: 55px;
+    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 25px;
-    border-bottom: solid 2px var(--font-color);
+    font-size: 35px;
     z-index: 1;
+    color: var(--font-color-reverse);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.699);
+    /* background-color: #4d87c7; */
+    /* border-bottom: solid 3px var(--font-color); */
 }
 
 .header-inner-wrapper {
@@ -79,11 +93,73 @@ html {
 .homepage-image-slideshow {
     z-index: 0;
     width: 100%;
-    height: 100%;
+    height: 55vh;
     position: absolute;
     top: 0;
     background-size: cover;
     background-position: center;
     background-image: var(--image1);
     transition: background-image 2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: solid 3px var(--font-color);
+    /* filter: blur(2px); */
+}
+
+.title-text {
+    position: absolute;
+    text-align: center;
+    font-size: 80px;
+    color: var(--font-color-reverse);
+    top: 130px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: max-content;
+}
+
+.align-div {
+    height: calc(55vh - 65px);
+    width: 100%;
+}
+
+
+/* main body */
+
+main {
+    height: 100%;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+.main-inner-top-header {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    color: black;
+}
+
+.quote div span {
+    transition: opacity 0.2s ease-out;
+}
+
+.quote div:last-child {
+    color: #e94592;
 }
