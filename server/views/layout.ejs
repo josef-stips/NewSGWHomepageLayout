@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Städtisches Gymnasium Wermelskirchen</title>
+    <title>
+        <%- title %>
+    </title>
 
     <link rel="stylesheet" href="style/style.css">
     <script src="https://kit.fontawesome.com/8f7afdedcd.js" crossorigin="anonymous"></script>
@@ -14,97 +16,7 @@
 </head>
 
 <body>
-    <!-- top header -->
-    <header class="site-header">
-
-        <div class="header-left-inner header-inner-wrapper">
-            <nav>
-                <ul>
-                    <li><img src="assets/dummy_100x100_ffffff_cccccc.png" alt="sgw logo" width="40" height="40"></li>
-                    <li><i class="fa-solid fa-bars hover-item"></i></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="header-right-inner header-inner-wrapper">
-
-            <nav>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-user hover-item"></i>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-moon hover-item theme-btn"></i>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-    </header>
-
-    <!-- big bg image with big title -->
-    <div class="homepage-image-slideshow">
-    </div>
-
-    <!-- absolute position -->
-    <div class="title-text">
-        <h1>Städtisches Gymnasium</h1>
-        <h4>Wermelskirchen</h4>
-    </div>
-
-    <!-- purpose: The above elements are absolute which means the main element would be under the above elements.
-    to align everything one by one this normal div without content has the same height as the slide show/header elements above -->
-    <div class="align-div">
-    </div>
-
-    <!-- main body -->
-    <main>
-        <!-- left site bar -->
-        <div class="main-bar-left">
-            <h1>Verwaltung</h1>
-
-            <ul class="inner-list">
-                <li><a href="https://sgw-schule.de/iserv/auth/login?_target_pa
-                    th=/iserv/auth/auth?_iserv_app_url%3D%252Fiserv%252F%26client_i
-                    d%3D4_43lbgfkt68g0c8ocg8cwwcw00400ssowwggcgs08gggoc4c80g%26nonce
-                    %3Dafa87ca3-00b4-4366-9eb9-e282e5c1892a%26redirect_uri%3Dhttps%25
-                    3A%252F%252Fsgw-schule.de%252Fiserv%252Fapp%252Fauthentication%252F
-                    redirect%26response_type%3Dcode%26scope%3Dopenid%2520uuid%2520iserv
-                    %253Asession-id%2520iserv%253Aweb-ui%2520iserv%253A2fa%253Aconfig
-                    uration%2520iserv%253Aaccess-groups%26state%3DeyJ0eXAiOiJKV1QiLCJh
-                    bGciOiJFUzI1NiIsImtpZCI6IjEifQ.eyJyZWRpcmVjdF91cmkiOiJodHRwczpcL1w
-                    vc2d3LXNjaHVsZS5kZVwvaXNlcnZcLyIsIm5vbmNlIjoiYWZhODdjYTMtMDBiNC00M
-                    zY2LTllYjktZTI4MmU1YzE4OTJhIiwiYWRtaW4iOmZhbHNlLCJpc3MiOiJodHRwczp
-                    cL1wvc2d3LXNjaHVsZS5kZVwvaXNlcnZcLyIsImV4cCI6MTcxNTI1NTQ0NywibmJmIj
-                    oxNzA3NDc5Mzg3LCJpYXQiOjE3MDc0Nzk0NDcsInNpZCI6IiJ9.HDKbia7s-vdO5sIw
-                    djVNBW_8zkyX-jSmC9hIwpXKbtQcCSBDKTrP_QcnW2p8iHaKBXUjJA9Z-AJy6M2VD8E
-                    E5Q">Iserv</a></li>
-                <li>
-                    <a title="Leistung/ Verwaltung" href="/leitungverwaltung">Leistung/Verwaltung</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- middle main content -->
-        <div class="main-bar-middle ">
-
-            <%- include(mainContent) %>
-
-        </div>
-
-        <!-- right site bar -->
-        <div class="main-bar-right">
-            <ul>
-                <li>
-                    <a href="">
-                        <img src="assets/sgw-official-imgs/Logo.jpg" alt="#nie wieder ist jetzt nrw" width="170" height="170">
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-    </main>
-
+    <%- include("./index.ejs") %>
 </body>
 
 </html>

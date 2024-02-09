@@ -19,7 +19,12 @@ app.use('/leitungverwaltung', LeitungVerwaltungRouter);
 
 // navigation
 app.get('', (req, res) => {
-    res.render("layout", { mainContent: '../views/partials/HomePageContent.ejs' });
+    res.render("layout", { mainContent: '../views/partials/HomePageContent.ejs', title: "Städtisches Gymnasium Wermelskirchen" });
+});
+
+// set up 404 page
+app.use((req, res) => {
+    res.status(404).render("404", { layout: "404", title: "404 | Städtisches Gymnasium Wermelskirchen" });
 });
 
 // listen to port
