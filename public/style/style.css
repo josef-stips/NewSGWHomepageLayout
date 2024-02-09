@@ -92,6 +92,14 @@ a:hover {
     margin: 15px 0 5px 15px;
 }
 
+.bc-theme {
+    color: #4d87c7;
+}
+
+.pk-theme {
+    color: #e94592;
+}
+
 
 /* general mini classes */
 
@@ -99,6 +107,16 @@ a:hover {
     display: flex;
     flex-direction: row;
     gap: 0.25em;
+}
+
+.clm-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+.info-text-box-big {
+    color: var(--font-color);
 }
 
 
@@ -188,6 +206,20 @@ main {
     justify-content: space-between;
 }
 
+.main-bar-middle {
+    width: 70%;
+    height: max-content;
+}
+
+.main-content {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 40px 0 0 20px;
+}
+
 .main-bar-left {
     margin: 0 0 0 20px;
     color: var(--font-color);
@@ -206,7 +238,7 @@ main {
 .main-bar-right {
     margin: 20px 20px 0 0;
     height: 100%;
-    width: 15%;
+    width: 17.5%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -233,7 +265,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.25em;
-    color: black;
+    height: 50px;
     color: var(--font-color);
 }
 
