@@ -6,12 +6,27 @@ class App {
     // init. app
     init = () => {
         this.init_DOM();
+        this.load_localstorage();
     };
 
     // init. DOM
     init_DOM = () => {
         // create slide show for home page
         PageSlideShow();
+    };
+
+    // check local storage
+    load_localstorage = () => {
+        this.load_theme();
+    };
+
+    load_theme = () => {
+        if (localStorage.getItem("dark-theme") == null) {
+            localStorage.setItem("dark-theme", "white");
+
+        } else if (localStorage.getItem("dark-theme") == "dark") {
+            document.body.classList.add("dark-theme");
+        }
     };
 };
 
@@ -35,40 +50,17 @@ function PageSlideShow() {
         SlideShow.style.backgroundImage = images[currentImageIndex];
     };
 
-    setInterval(nextImage, 10000);
+    setInterval(nextImage, 1000000);
 };
 
-// quote fade in effect on site loaded
-window.addEventListener('DOMContentLoaded', () => {
-    const quoteText = document.getElementById('quote-text');
-    const authorText = document.getElementById('author-text');
+// switch to light/dark theme btn click event
+themeBtn.addEventListener("click", () => {
+    if (document.body.classList.contains("dark-theme")) {
+        document.body.classList.remove("dark-theme");
+        localStorage.setItem("dark-theme", "white");
 
-    // Teilen Sie den Text in einzelne Buchstaben auf
-    const quoteLetters = ["„", "D", "i", "e", " ", "b", "e", "s", "t", "e", " ", "B", "i", "l", "d", "u", "n", "g", " ", "f", "i", "n", "d", "e", "t", " ", "e", "i", "n", " ", "g", "e", "s", "c", "h", "e", "i", "t", "e", "r", " ", "M", "e", "n", "s", "c", "h", " ", "a", "u", "f", " ", "R", "e", "i", "s", "e", "n", "“", " "]
-    const authorLetters = ["~", " ", "J", "o", "h", "a", "n", "n", " ", "W", "o", "l", "f", "g", "a", "n", "g", " ", "v", "o", "n", " ", "G", "o", "e", "t", "h", "e"]
-
-    fadeInLetters = (letters, element) => {
-        return new Promise((resolve) => {
-            letters.forEach((letter, index) => {
-                const span = document.createElement('span');
-                span.textContent = letter;
-                span.style.opacity = 0;
-
-                element.appendChild(span);
-
-                setTimeout(() => {
-                    span.style.opacity = 1;
-
-                    if (index === letters.length - 1) {
-                        resolve();
-                    };
-                }, index * 10);
-            });
-        });
+    } else {
+        document.body.classList.add("dark-theme");
+        localStorage.setItem("dark-theme", "dark");
     };
-
-    fadeInLetters(quoteLetters, quoteText)
-        .then(() => {
-            return fadeInLetters(authorLetters, authorText)
-        });
 });
