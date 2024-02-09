@@ -1,1 +1,1 @@
-#New SGW school homepage
+New SGW school homepage
