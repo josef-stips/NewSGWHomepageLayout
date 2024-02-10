@@ -159,8 +159,9 @@ a:hover {
     height: 55vh;
     position: absolute;
     top: 0;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-image: var(--image1);
     transition: background-image 2s ease;
     display: flex;
