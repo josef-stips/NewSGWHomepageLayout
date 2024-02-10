@@ -15,9 +15,11 @@ app.set('view engine', 'ejs');
 // routes (URI's)
 const LeitungVerwaltungRouter = require("./routes/leitungverwaltung.js");
 const NodeRouter = require("./routes/node.js");
+const LogInRouter = require("./routes/login.js");
 
 app.use('/leitungverwaltung', LeitungVerwaltungRouter);
 app.use('/node', NodeRouter);
+app.use('/login', LogInRouter);
 
 // all general routes
 const GeneralRouteMappings = [
