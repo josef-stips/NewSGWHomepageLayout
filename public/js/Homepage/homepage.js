@@ -1,7 +1,6 @@
 // quote fade in effect on site loaded
 window.addEventListener('DOMContentLoaded', () => {
     QuoteFadeInEffect();
-    HideAllInnerLists();
     MainBoxesAnimation();
 });
 
@@ -38,17 +37,6 @@ function QuoteFadeInEffect() {
         .then(() => {
             return fadeInLetters(authorLetters, authorText)
         });
-};
-
-// hides all inner lists in the left side bar
-function HideAllInnerLists() {
-    AnmeldungList.style.display = "none";
-    UnterrichtsorganisationList.style.display = "none";
-    SchulprogrammList.style.display = "none";
-    LernprozesseList.style.display = "none";
-    WahlpflichtfächerList.style.display = "none";
-    SchulpflegschaftList.style.display = "none";
-    faecherList.style.display = "none";
 };
 
 // When page is loaded the main boxes get a fade in animation

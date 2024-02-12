@@ -13,6 +13,7 @@ class App {
     init_DOM = () => {
         // create slide show for home page
         // PageSlideShow();
+        HideAllInnerLists();
     };
 
     // check local storage
@@ -53,6 +54,26 @@ function PageSlideShow() {
     setInterval(nextImage, 2000);
 };
 
+// hides all inner lists in the left side bar
+function HideAllInnerLists() {
+    AnmeldungList.style.display = "none";
+    UnterrichtsorganisationList.style.display = "none";
+    SchulprogrammList.style.display = "none";
+    LernprozesseList.style.display = "none";
+    WahlpflichtfächerList.style.display = "none";
+    SchulpflegschaftList.style.display = "none";
+    faecherList.style.display = "none";
+
+    if (sessionStorage.getItem("OpenedInnerList")) {
+        switch (sessionStorage.getItem("OpenedInnerList")) {
+
+            case "orga":
+                UnterrichtsorganisationList.style.display = "block";
+                break;
+        };
+    };
+};
+
 // switch to light/dark theme btn click event
 themeBtn.addEventListener("click", () => {
     if (document.body.classList.contains("dark-theme")) {
@@ -74,4 +95,11 @@ HeaderBars.addEventListener("click", () => {
 LeftBarCloseBtn.addEventListener("click", () => {
     mainBarLeft.style.left = "-50vh";
     mainBarLeft.style.opacity = "0";
+});
+
+UnterrichtsorganisationListBtn.addEventListener("click", () => {
+    HideAllInnerLists();
+    UnterrichtsorganisationList.style.display = "block";
+
+    sessionStorage.setItem("OpenedInnerList", "orga");
 });

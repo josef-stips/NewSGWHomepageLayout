@@ -11,3 +11,4 @@ let LernprozesseList = document.querySelector(".Lernprozesse-list");
 let WahlpflichtfächerList = document.querySelector(".Wahlpflichtfächer-list");
 let SchulpflegschaftList = document.querySelector(".Schulpflegschaft-list");
 let faecherList = document.querySelector(".faecher-list");
+let UnterrichtsorganisationListBtn = document.querySelector(".UnterrichtsorganisationListBtn");

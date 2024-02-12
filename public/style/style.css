@@ -107,7 +107,7 @@ a:hover {
 
 .rw-flex {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     gap: 0.25em;
 }
 
@@ -458,8 +458,14 @@ footer {
     text-align: center;
 }
 
+.faecher-list-content {
+    line-height: 2em;
+    border-right: 2px solid var(--font-color);
+    padding: 20px 25px 20px 0;
+}
 
-/* table */
+
+/* tables */
 
 .Calender-table {
     border-collapse: collapse;
@@ -476,6 +482,50 @@ footer {
 .Calender-table tr td {
     text-align: left;
     min-width: 13%;
+}
+
+.Unterrichtsorga-main-content .card {
+    width: 80% !important;
+}
+
+.Unterrichtsorga-table td:first-child {
+    text-align: left;
+    min-width: 30%;
+}
+
+.Unterrichtsorga-table th:first-child {
+    text-align: left;
+    min-width: 30%;
+}
+
+
+/* LeitungVerwaltungWrapper */
+
+.gridBox-wrapper {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LeitungVerwaltungWrapper {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4, minmax(300px, 400px));
+    justify-content: space-around;
+}
+
+.card {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 20px;
+    border: 2px solid var(--font-color);
+    border-radius: 20px;
 }
 
 
