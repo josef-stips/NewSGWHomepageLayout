@@ -12,7 +12,7 @@ class App {
     // init. DOM
     init_DOM = () => {
         // create slide show for home page
-        PageSlideShow();
+        // PageSlideShow();
     };
 
     // check local storage
@@ -50,7 +50,7 @@ function PageSlideShow() {
         SlideShow.style.backgroundImage = images[currentImageIndex];
     };
 
-    setInterval(nextImage, 1000000);
+    setInterval(nextImage, 2000);
 };
 
 // switch to light/dark theme btn click event
@@ -63,4 +63,15 @@ themeBtn.addEventListener("click", () => {
         document.body.classList.add("dark-theme");
         localStorage.setItem("dark-theme", "dark");
     };
+});
+
+// on bars in header click 
+HeaderBars.addEventListener("click", () => {
+    mainBarLeft.style.left = "0";
+    mainBarLeft.style.opacity = "1";
+});
+
+LeftBarCloseBtn.addEventListener("click", () => {
+    mainBarLeft.style.left = "-50vh";
+    mainBarLeft.style.opacity = "0";
 });

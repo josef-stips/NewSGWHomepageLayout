@@ -16,10 +16,16 @@ app.set('view engine', 'ejs');
 const LeitungVerwaltungRouter = require("./routes/leitungverwaltung.js");
 const NodeRouter = require("./routes/node.js");
 const LogInRouter = require("./routes/login.js");
+const KontaktRouter = require("./routes/kontakt.js");
+const ImpressumRouter = require("./routes/impressum.js");
+const NeuesRouter = require("./routes/Neues.js");
 
 app.use('/leitungverwaltung', LeitungVerwaltungRouter);
 app.use('/node', NodeRouter);
 app.use('/login', LogInRouter);
+app.use('/kontakt', KontaktRouter);
+app.use('/impressum', ImpressumRouter);
+app.use('/neues', NeuesRouter);
 
 // all general routes
 const GeneralRouteMappings = [
@@ -90,7 +96,7 @@ app.get('', (req, res) => {
 
 // set up 404 page
 app.use("*", (req, res) => {
-    res.status(404).render("404", { layout: "404", title: "404 | Städtisches Gymnasium Wermelskirchen" });
+    res.status(404).render("404", { mainContent: "404", title: "404 | Städtisches Gymnasium Wermelskirchen" });
 });
 
 // listen to port

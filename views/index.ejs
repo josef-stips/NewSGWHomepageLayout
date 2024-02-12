@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li><img src="assets/dummy_100x100_ffffff_cccccc.png" alt="sgw logo" width="40" height="40"></li>
-                    <li><i class="fa-solid fa-bars hover-item"></i></li>
+                    <li><i class="fa-solid fa-bars hover-item HeaderBars" style="color:white;"></i></li>
                 </ul>
             </nav>
         </div>
@@ -27,7 +27,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="/login" class="fa-solid fa-user hover-item user-icon"></a>
+                        <a href="/login" class="fa-solid fa-user hover-item user-icon" style="color: var(--font-color);"></a>
                     </li>
                     <li>
                         <i class="fa-solid fa-moon hover-item theme-btn"></i>
@@ -57,6 +57,9 @@
     <main>
         <!-- left site bar -->
         <div class="main-bar-left">
+            <!-- absolute position item -->
+            <i class="fa-solid fa-angle-left LeftBarCloseBtn"></i>
+
             <h1>Verwaltung</h1>
 
             <ul class="inner-list main-list">
@@ -130,14 +133,14 @@
                         <i class="fa-solid fa-angle-right Schulprogramm-btn-angle"></i>
                         <p>Schulprogramm</p>
 
-                        <ul class="inner-list">
+                        <ul class="inner-list Schulprogramm-list">
                             <li><a href="/node/2157">Gestaltung der einzelnen Schulstufen</a></li>
                             <li style="list-style-type: none;">
                                 <a href="/node/2162" class="rw-flex">
                                     <i class="fa-solid fa-angle-right Lernprozess-btn-angle"></i>
                                     <p>Struckturierung von Lernprozessen</p>
 
-                                    <ul class="inner-list">
+                                    <ul class="inner-list Lernprozesse-list">
                                         <li><a href="/node/2169">Förderkonzept Sek 1</a></li>
                                         <li><a href="/node/2177">Methodenkonzept</a></li>
                                         <li><a href="/node/2178">Hausaufgabenkonzept</a></li>
@@ -183,7 +186,7 @@
                         <i class="fa-solid fa-angle-right Schulpflegschaft-btn-angle"></i>
                         <p>Schulpflegschaft</p>
 
-                        <ul class="inner-list">
+                        <ul class="inner-list Schulpflegschaft-list">
                             <li><a href="/kind-im-chat">Kind im Internet</a></li>
                             <li><a href="/interessante-angebote-für-eltern">Ineressante Angebote für Eltern</a></li>
                         </ul>
@@ -210,7 +213,7 @@
                         <p>Fächer</p>
                     </a>
 
-                    <ul class="inner-list">
+                    <ul class="inner-list faecher-list">
                         <li><a href="/deutsch">Deutsch</a></li>
                         <li>
                             <a href="/englisch">Englisch</a>
@@ -249,16 +252,9 @@
                             <a href="/philosophie">Philosophie</a>
                         </li>
 
-                        <li style="list-style-type: none;">
+                        <li>
                             <a href="/node/2609" class="rw-flex">
-                                <i class="fa-solid fa-angle-right Mathe-btn-angle"></i>
-                                <p>Mathematik</p>
-
-                                <ul class="inner-list">
-                                    <li>
-                                        <a href="/fachbereich-mathematik">Mathematik</a>
-                                    </li>
-                                </ul>
+                                Mathematik
                             </a>
                         </li>
                         <li>
@@ -291,7 +287,7 @@
                         <i class="fa-solid fa-angle-right Mathe-btn-angle"></i>
                         <p>Wahlpflichtfächer</p>
 
-                        <ul class="inner-list">
+                        <ul class="inner-list Wahlpflichtfächer-list">
                             <li><a href="/differenzierungskurs-biologie-chemie">Biologie/ Chemie</a></li>
                             <li><a href="/biologiesport">Biologie/ Sport</a></li>
                             <li><a href="/deutschgeschichte">Deutsch/ Geschichte</a></li>
@@ -315,7 +311,7 @@
         </div>
 
         <!-- right site bar -->
-        <div class="main-bar-right">
+        <div class="main-bar-right" style="display: none;">
             <ul class="main-list">
                 <li>
                     <a target="_blank" href="https://www.land.nrw/niewiederistjetzt">
@@ -427,6 +423,49 @@
         </div>
 
     </main>
+
+    <span class="AboveFooterInfo">
+        <a href="/"><h3>Startseite</h3></a>
+        <p>|</p>
+        <a href="/kontakt"><h3>Kontakt</h3></a>
+        <p>|</p>
+        <a href="/impressum"><h3>Impressum</h3></a>
+    </span>
+
+    <footer>
+        <div class="footer-wrapper">
+
+            <div>
+                <h3>Copyright:</h3>
+                <h3>© Städtisches Gymnasium Wermelskirchen</h3>
+
+            </div>
+            <div>
+                <h3>Rufe uns an:</h3>
+                <h3>Tel.
+                    <a href="tel:02196/708690" class="color-link">02196/708690</a>
+                </h3>
+            </div>
+            <div>
+                <h3>Verpasse nichts neues:</h3>
+                <a target="_blank" href="https://www.facebook.com/StaedtischesGymnasiumWermelskirchen/?locale=de_DE" style="color: var(--font-color);">
+                    <h3 class="fa-brands fa-facebook"></h3>
+                </a>
+            </div>
+            <div>
+                <h3>Kontaktiere uns:</h3>
+                <h3>sekretariat(at)sgw-dienst.de </h3>
+            </div>
+            <div>
+                <h3>Unser Schulserver:</h3>
+                <a target="_blank" href="https://sgw-schule.de/iserv/auth/login?_target_path=/iserv/auth/auth?_iserv_app_url%3D%252Fiserv%252Fmail%253Fpath%253DINBOX%2526start%253D0%26client_id%3D4_43lbgfkt68g0c8ocg8cwwcw00400ssowwggcgs08gggoc4c80g%26nonce%3Df5fda14a-8b12-4bb6-a7a8-b67210727cd8%26redirect_uri%3Dhttps%253A%252F%252Fsgw-schule.de%252Fiserv%252Fapp%252Fauthentication%252Fredirect%26response_type%3Dcode%26scope%3Dopenid%2520uuid%2520iserv%253Asession-id%2520iserv%253Aweb-ui%2520iserv%253A2fa%253Aconfiguration%2520iserv%253Aaccess-groups%26state%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjEifQ.eyJyZWRpcmVjdF91cmkiOiJodHRwczpcL1wvc2d3LXNjaHVsZS5kZVwvaXNlcnZcL21haWw_cGF0aD1JTkJPWCZzdGFydD0wIiwibm9uY2UiOiJmNWZkYTE0YS04YjEyLTRiYjYtYTdhOC1iNjcyMTA3MjdjZDgiLCJhZG1pbiI6ZmFsc2UsImlzcyI6Imh0dHBzOlwvXC9zZ3ctc2NodWxlLmRlXC9pc2VydlwvIiwiZXhwIjoxNzE1NTE0MDUyLCJuYmYiOjE3MDc3Mzc5OTIsImlhdCI6MTcwNzczODA1Miwic2lkIjoiIn0.fVJEGRBChDgv0mNhEMaD-l7YZM7xW2zUctDQKw4Pwjjxp9qzX_A6ONBgeOSvSlQ4OPFwBTFLi7sVdCI3cQkc6w"
+                    style="color: var(--font-color)">
+                    <h3>Iserv</h3>
+                </a>
+            </div>
+        </div>
+
+    </footer>
 
 </body>
 

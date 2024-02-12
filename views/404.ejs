@@ -8,27 +8,21 @@
         <%- title %>
     </title>
     <style>
-        body {
-            background-color: #171717;
-            color: white;
-            font-family: Arial, sans-serif;
+        .container {
+            margin-top: 100px;
             text-align: center;
         }
         
-        .container {
-            margin-top: 100px;
-        }
-        
-        h1 {
+        .notFound_title {
             font-size: 4em;
             color: #4d87c7;
         }
         
-        p {
+        .notFoundText {
             font-size: 1.5em;
         }
         
-        a {
+        .notFoundLink {
             color: orange;
             text-decoration: none;
             font-weight: bold;
@@ -37,11 +31,14 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>404 - Nichts gefunden!</h1>
-        <p>Entschuldigung, die angeforderte Seite wurde nicht gefunden.</p>
-        <p>Gehe zurück zur <a href="/">Startseite</a>.</p>
-    </div>
+    <main class="main-content">
+        <div class="container">
+            <h1 class="notFound_title">404 - Nichts gefunden!</h1>
+            <br>
+            <p class="notFoundText">Entschuldigung, die angeforderte Seite wurde nicht gefunden.</p>
+            <p class="notFoundText">Gehe zurück zur <a class="notFoundLink" href="/">Startseite</a>.</p>
+        </div>
+    </main>
 </body>
 
 </html>

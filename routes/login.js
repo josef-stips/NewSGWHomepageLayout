@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("layout", { title: "Anmeldung | Städtisches Gymnasium Wermelskirchen", layout: "../views/login", mainContent: "../views/login" });
+    res.render("layout", { title: "Anmeldung | Städtisches Gymnasium Wermelskirchen", mainContent: "../views/login", mainContent: "../views/login" });
 });
 
 // user tries to log in

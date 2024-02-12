@@ -12,8 +12,9 @@ html {
 }
 
 :root {
-    --font-color: black;
+    --font-color: #313131;
     --font-color-reverse: white;
+    --light-font-color: #171717;
     --hover-color: orange;
     --transition-time: 0.15s;
     /* images of school for slide show */
@@ -21,7 +22,7 @@ html {
     --image2: url("../assets/dummy_1920x1080_ffffff_cccccc_image-2.png");
     --image3: url("../assets/dummy_1920x1080_ffffff_cccccc_image-3.png");
     --image4: url("../assets/dummy_1920x1080_ffffff_cccccc_image-4.png"); */
-    --image1: url("../assets/banane.jpg");
+    --image1: url("../assets/gymnasium-wermelskirchen-ii-af1bfe17-2a9a-409d-b44e-c7e70691c707.jpg");
     --image2: url("../assets/nature-3082832_1920.jpg");
     --image3: url("../assets/mountain-landscape-2031539_1920.jpg");
     --image4: url("../assets/road-1072821_1920.jpg");
@@ -30,6 +31,7 @@ html {
 .dark-theme {
     --font-color: white;
     --font-color-reverse: #171717;
+    --light-font-color: rgb(255, 255, 255);
 }
 
 
@@ -119,6 +121,39 @@ a:hover {
     color: var(--font-color);
 }
 
+.list-image {
+    width: 100%;
+    height: 100%;
+}
+
+.color-link {
+    color: #4d87c7;
+}
+
+.color-link:hover {
+    color: var(--hover-color);
+}
+
+.align-cnt {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.no-color-on-hover:hover {
+    color: unset;
+}
+
+.rw-list {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.rw-list li {
+    display: flex;
+    flex-direction: row;
+}
+
 
 /* header */
 
@@ -131,7 +166,7 @@ a:hover {
     align-items: center;
     font-size: 35px;
     z-index: 1;
-    color: white;
+    color: var(--font-color);
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.699);
     /* background-color: #4d87c7; */
     /* border-bottom: solid 3px var(--font-color); */
@@ -153,6 +188,9 @@ a:hover {
 
 /* homepage-image-slideshow */
 
+
+/* version 1 */
+
 .homepage-image-slideshow {
     z-index: 0;
     width: 100%;
@@ -169,14 +207,18 @@ a:hover {
     align-items: center;
     flex-direction: column;
     border-bottom: solid 3px var(--font-color);
-    /* filter: blur(2px); */
+    filter: blur(2px);
+    border-radius: 53% 0% 100% 17% / 0% 0% 100% 6%;
 }
+
+
+/* other */
 
 .title-text {
     position: absolute;
     text-align: center;
     font-size: 80px;
-    color: white;
+    color: var(--light-font-color);
     top: 130px;
     bottom: 0;
     left: 0;
@@ -184,7 +226,7 @@ a:hover {
     display: flex;
     gap: 0.5em;
     flex-direction: column;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 4px 4px 6px var(--font-color-reverse);
     width: 100%;
     height: max-content;
 }
@@ -208,26 +250,68 @@ main {
 }
 
 .main-bar-middle {
-    width: 70%;
+    width: 100%;
     height: max-content;
 }
 
 .main-content {
-    width: 100%;
+    width: 90%;
     height: max-content;
     display: flex;
     justify-content: start;
     align-items: start;
     padding: 40px 0 0 20px;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--font-color);
+    /*  */
+    /* height: 45vh; */
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 3em;
+    margin-bottom: 100px;
+    align-items: center;
 }
 
 .main-bar-left {
-    margin: 0 0 0 20px;
+    padding: 10px 0 0 20px;
+    position: fixed;
+    height: 100vh;
+    width: 24.5%;
+    z-index: 1;
+    top: 0;
+    left: -50vh;
+    opacity: 0;
+    background-color: var(--font-color-reverse);
     color: var(--font-color);
-    border-right: 2px solid var(--font-color);
-    height: 100%;
-    width: 22.5%;
+    border-right: 5px solid var(--font-color);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: left 0.5s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.main-bar-left::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0);
     color: var(--font-color);
+}
+
+.main-bar-left::-webkit-scrollbar-thumb {
+    background-color: var(--font-color);
+    color: var(--font-color);
+}
+
+.LeftBarCloseBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 25px;
+    transition: color var(--transition-time) ease-out;
+}
+
+.LeftBarCloseBtn:hover {
+    transition: color var(--transition-time) ease-out;
+    color: var(--hover-color);
 }
 
 .main-bar-left ul {
@@ -278,7 +362,130 @@ main {
     color: #e94592;
 }
 
-.list-image {
-    width: 100%;
+
+/* box grid */
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    width: 85%;
+    height: 210px;
+    gap: 3em;
+}
+
+.box {
+    width: 245px;
     height: 100%;
+    border: 4px solid #b12f6c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease-out;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.699);
+    /*  */
+    width: 285px;
+    height: 125%;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.15s ease-out, opacity 1.5s ease-out;
+}
+
+.box:hover {
+    cursor: pointer;
+    transition: transform 0.15s ease-out;
+    transform: scale(1.05);
+}
+
+.main-box-grid .box {
+    opacity: 0;
+    /* modify in main.js */
+}
+
+
+/* footer */
+
+.AboveFooterInfo {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    padding: 0 0 10px 20px;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 10%;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: var(--font-color-reverse);
+    color: var(--font-color);
+    padding-top: 2em;
+    border-top: 2px solid var(--font-color);
+}
+
+.footer-wrapper {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    opacity: 0;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 20%;
+}
+
+.footer-wrapper div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer-wrapper div a {
+    text-align: center;
+}
+
+.footer-wrapper div h3 {
+    text-align: center;
+}
+
+
+/* table */
+
+.Calender-table {
+    border-collapse: collapse;
+}
+
+.Calender-table tr {
+    display: flex;
+    gap: 15em;
+    flex-direction: row;
+    line-height: 2em;
+    border-bottom: 1px solid grey;
+}
+
+.Calender-table tr td {
+    text-align: left;
+    min-width: 13%;
+}
+
+
+/* animations */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

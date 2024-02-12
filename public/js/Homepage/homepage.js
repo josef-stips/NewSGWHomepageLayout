@@ -1,5 +1,12 @@
 // quote fade in effect on site loaded
 window.addEventListener('DOMContentLoaded', () => {
+    QuoteFadeInEffect();
+    HideAllInnerLists();
+    MainBoxesAnimation();
+});
+
+// quote fade in effect on start page
+function QuoteFadeInEffect() {
     const quoteText = document.getElementById('quote-text');
     const authorText = document.getElementById('author-text');
 
@@ -31,4 +38,34 @@ window.addEventListener('DOMContentLoaded', () => {
         .then(() => {
             return fadeInLetters(authorLetters, authorText)
         });
-});
+};
+
+// hides all inner lists in the left side bar
+function HideAllInnerLists() {
+    AnmeldungList.style.display = "none";
+    UnterrichtsorganisationList.style.display = "none";
+    SchulprogrammList.style.display = "none";
+    LernprozesseList.style.display = "none";
+    WahlpflichtfächerList.style.display = "none";
+    SchulpflegschaftList.style.display = "none";
+    faecherList.style.display = "none";
+};
+
+// When page is loaded the main boxes get a fade in animation
+function MainBoxesAnimation() {
+    let boxes = [...mainBoxGrid.children];
+
+    setTimeout(() => {
+        let index = 0;
+        let interval = setInterval(() => {
+            boxes[index].style.opacity = "1";
+
+            if (index >= boxes.length - 1) {
+                clearInterval(interval);
+                interval = null;
+            };
+
+            index++;
+        }, 100);
+    }, 300);
+};
