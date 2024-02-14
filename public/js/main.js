@@ -60,15 +60,26 @@ function HideAllInnerLists() {
     UnterrichtsorganisationList.style.display = "none";
     SchulprogrammList.style.display = "none";
     LernprozesseList.style.display = "none";
-    WahlpflichtfächerList.style.display = "none";
     SchulpflegschaftList.style.display = "none";
-    faecherList.style.display = "none";
 
     if (sessionStorage.getItem("OpenedInnerList")) {
         switch (sessionStorage.getItem("OpenedInnerList")) {
 
             case "orga":
                 UnterrichtsorganisationList.style.display = "block";
+                break;
+            case "schulprogramm":
+                SchulprogrammList.style.display = "block";
+                break;
+            case "lernprozess":
+                SchulprogrammList.style.display = "block";
+                LernprozesseList.style.display = "block";
+                break;
+            case "anmeldung":
+                AnmeldungList.style.display = "block";
+                break;
+            case "schulpflegschaft":
+                SchulpflegschaftList.style.display = "block";
                 break;
         };
     };
@@ -102,4 +113,32 @@ UnterrichtsorganisationListBtn.addEventListener("click", () => {
     UnterrichtsorganisationList.style.display = "block";
 
     sessionStorage.setItem("OpenedInnerList", "orga");
+});
+
+SchulprogrammListBtn.addEventListener("click", () => {
+    HideAllInnerLists();
+    SchulprogrammList.style.display = "block";
+
+    sessionStorage.setItem("OpenedInnerList", "schulprogramm");
+});
+
+LernprozessListBtn.addEventListener("click", () => {
+    HideAllInnerLists();
+    LernprozesseList.style.display = "block";
+
+    sessionStorage.setItem("OpenedInnerList", "lernprozess");
+});
+
+AnmeldungListBtn.addEventListener("click", () => {
+    HideAllInnerLists();
+    AnmeldungList.style.display = "block";
+
+    sessionStorage.setItem("OpenedInnerList", "anmeldung");
+});
+
+SchulpflegschaftListBtn.addEventListener("click", () => {
+    HideAllInnerLists();
+    SchulpflegschaftList.style.display = "block";
+
+    sessionStorage.setItem("OpenedInnerList", "schulpflegschaft");
 });
