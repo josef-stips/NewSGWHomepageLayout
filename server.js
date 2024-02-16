@@ -19,6 +19,7 @@ const LogInRouter = require("./routes/login.js");
 const KontaktRouter = require("./routes/kontakt.js");
 const ImpressumRouter = require("./routes/impressum.js");
 const NeuesRouter = require("./routes/Neues.js");
+const IVKRouter = require("./routes/general_routes/ivk.js");
 
 app.use('/leitungverwaltung', LeitungVerwaltungRouter);
 app.use('/node', NodeRouter);
@@ -26,6 +27,7 @@ app.use('/login', LogInRouter);
 app.use('/kontakt', KontaktRouter);
 app.use('/impressum', ImpressumRouter);
 app.use('/neues', NeuesRouter);
+app.use('/ivk', IVKRouter);
 
 // all general routes
 const GeneralRouteMappings = [
@@ -35,7 +37,7 @@ const GeneralRouteMappings = [
     { route: 'faecher', router: 'fächerRouter' },
     { route: 'foerderverein', router: 'fördervereinRouter' },
     { route: 'haus-und-schulordnung', router: 'hausUndSchulordnungRouter' },
-    { route: 'interessante-angebote-für-eltern', router: 'interessanteAngeboteFürElternRouter' },
+    { route: 'interessante-angebote-fuer-eltern', router: 'interessanteAngeboteFuerElternRouter' },
     { route: 'kind-im-chat', router: 'kindImChatRouter' },
     { route: 'leitungverwaltung', router: 'leitungverwaltungRouter' },
     { route: 'mensa-cafeteria', router: 'mensaCafeteriaRouter' },
