@@ -9,7 +9,7 @@ const NodeRoutes = [
     2139, 2147, 2150, 2152, 2153, 2157, 2162, 2163, 2164, 2165,
     2166, 2167, 2168, 2169, 2176, 2177, 2178, 2179, 2180, 2183,
     2197, 2206, 2218, 2221, 2236, 2249, 2250, 2263, 2298, 2424,
-    2443, 2494, 2544, 2548, 2580, 2594, 2609, 2610, 2616, 2698, 2578, 2119
+    2443, 2494, 2544, 2548, 2580, 2594, 2609, 2610, 2616, 2698, 2578, 2119, 2173
 ];
 
 const NodeContent = [
@@ -54,7 +54,8 @@ const NodeContent = [
     '../views/partials/nodes/node_2616.ejs',
     '../views/partials/nodes/node_2698.ejs',
     '../views/partials/nodes/node_2578.ejs',
-    '../views/partials/nodes/node_2119.ejs'
+    '../views/partials/nodes/node_2119.ejs',
+    '../views/partials/nodes/node_2173.ejs',
 ];
 
 // corresponding titles
@@ -100,7 +101,8 @@ const NodeTitles = [
     'Anmeldung EF',
     '..\\views\\partials\\nodes\\node_2698.ejs',
     'Digitale Selbstverteidigung',
-    'Französisch'
+    'Französisch',
+    'Forder- bzw. Förderunterricht'
 ];
 
 // main route which just returns the main page

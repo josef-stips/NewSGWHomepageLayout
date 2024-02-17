@@ -385,7 +385,7 @@ main {
     align-items: center;
 }
 
-.main-content h1:first-child {
+.main-content h1 {
     font-size: 60px;
     color: #4d87c7;
     align-self: center;
