@@ -7,15 +7,17 @@
 </head>
 
 <body>
-    <main class="main-content rw-flex" style="margin-top: 0;align-items:flex-start;justify-content:space-between;">
-        <div class="rw-flex">
+    <main class="main-content rw-flex">
+
+        <div class="rw-flex" style="width: 95%;justify-content:space-between;">
+
             <ul class="inner-list faecher-list-content">
                 <li><a href="/deutsch">Deutsch</a></li>
                 <li>
                     <a href="/englisch">Englisch</a>
                 </li>
                 <li>
-                    <a href="/französisch">Französisch</a>
+                    <a href="/franzoesisch">Französisch</a>
                 </li>
                 <li>
                     <a href="/spanisch">Spanisch</a>
@@ -76,14 +78,18 @@
                 </li>
             </ul>
 
-            <div>
-                <%- include(locals.fachContent || "./empty.ejs") %>
+            <div class="MaxWidth rw-flex" style="justify-content:center;">
+                <div>
+                    <img src=<%- locals.faecherIMG %> >
+                </div>
+
+                <div class=< %- locals.fachContentWidth || "MaxWidth" %> >
+                    <%- include(locals.fachContent || "./empty.ejs") %>
+                </div>
             </div>
+
         </div>
 
-        <img src=<%- locals.faecherIMG %> >
-
-        <div></div>
     </main>
 </body>
 

@@ -1,10 +1,10 @@
-body,
-html {
+body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
     margin: 0;
     background-color: var(--font-color-reverse);
     transition: background-color 0.25s ease-out;
+    width: 100%;
 }
 
 * {
@@ -251,6 +251,19 @@ a:hover {
 
 .revert-table tr {
     display: revert-layer;
+}
+
+.NullWidth {
+    width: 0;
+}
+
+.MaxWidth {
+    width: 100%;
+}
+
+.bigh1 {
+    font-size: 60px;
+    color: #4d87c7;
 }
 
 

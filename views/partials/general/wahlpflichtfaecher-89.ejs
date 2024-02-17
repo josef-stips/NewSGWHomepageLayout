@@ -7,25 +7,35 @@
 </head>
 
 <body>
-    <main class="main-content rw-flex" style="margin-top: 0;justify-content:space-between;align-items:flex-start;">
+    <main class="main-content rw-flex">
 
-        <ul class="inner-list faecher-list-content">
-            <li><a href="/differenzierungskurs-biologie-chemie">Biologie/ Chemie</a></li>
-            <li><a href="/biologiesport">Biologie/ Sport</a></li>
-            <li><a href="/deutschgeschichte">Deutsch/ Geschichte</a></li>
-            <li><a href="/kunstpolitik">Kunst/ Politik</a></li>
-            <li><a href="/mathematikinformatik">Mathematik/ Informatik</a></li>
-            <li><a href="/physiktechnik">Physik/ Technik</a></li>
-            <li><a href="/franzoesisch">Französisch</a></li>
-            <li><a href="/spanisch-0">Spanisch</a></li>
-            <li>
-                <a class="color-link" href="/faecher">Zu den normalen Fächern</a>
-            </li>
-        </ul>
+        <div class="rw-flex" style="width: 95%;justify-content:space-between;">
+            <ul class="inner-list faecher-list-content">
+                <li><a href="/differenzierungskurs-biologie-chemie">Biologie/ Chemie</a></li>
+                <li><a href="/biologiesport">Biologie/ Sport</a></li>
+                <li><a href="/deutschgeschichte">Deutsch/ Geschichte</a></li>
+                <li><a href="/kunstpolitik">Kunst/ Politik</a></li>
+                <li><a href="/mathematikinformatik">Mathematik/ Informatik</a></li>
+                <li><a href="/physiktechnik">Physik/ Technik</a></li>
+                <li><a href="/node/2119">Französisch</a></li>
+                <li><a href="/spanisch-0">Spanisch</a></li>
+                <li>
+                    <a class="color-link" href="/faecher">Zu den standard Fächern</a>
+                </li>
+            </ul>
 
-        <img src="assets/sgw-official/Wahlpflichtfaecher.png" alt="Faecher">
+            <div class="MaxWidth rw-flex" style="justify-content:center;">
+                <div>
+                    <img src=<%- locals.faecherIMG %>>
+                </div>
 
-        <div></div>
+                <div class=<%- locals.fachContentWidth || "MaxWidth" %> >
+                    <%- include(locals.fachContent || "./empty.ejs") %>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 </body>
 
