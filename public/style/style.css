@@ -115,6 +115,13 @@ a:hover {
 
 /* general mini classes */
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .rw-flex {
     display: flex;
     flex-direction: row !important;
@@ -266,6 +273,27 @@ a:hover {
     color: #4d87c7;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.grid-item p {
+    margin: 5px 0 0;
+}
+
+.pink-list li {
+    color: #b12f6c;
+}
+
 
 /* header */
 
@@ -385,12 +413,11 @@ main {
     align-items: center;
 }
 
-
-/* .main-content h1 {
-    font-size: 60px;
+.main-content h1 {
+    font-size: 40px;
     color: #4d87c7;
     align-self: center;
-} */
+}
 
 .main-bar-left {
     padding: 10px 0 0 20px;
@@ -486,9 +513,9 @@ main {
 
 .box-grid {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    width: 85%;
-    height: 210px;
+    grid-template-columns: repeat(auto, auto);
+    width: 100%;
+    height: auto;
     gap: 3em;
 }
 

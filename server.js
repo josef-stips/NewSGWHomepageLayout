@@ -20,6 +20,8 @@ const KontaktRouter = require("./routes/kontakt.js");
 const ImpressumRouter = require("./routes/impressum.js");
 const NeuesRouter = require("./routes/Neues.js");
 const IVKRouter = require("./routes/general_routes/ivk.js");
+const FachbuchRouter = require("./routes/general_routes/fachbuch.js");
+const ArbeitsgemeinschaftAuschwitz = require("./routes/general_routes/subs/arbeitsgemeinschaft-auschwitz.js")
 
 app.use('/leitungverwaltung', LeitungVerwaltungRouter);
 app.use('/node', NodeRouter);
@@ -28,12 +30,13 @@ app.use('/kontakt', KontaktRouter);
 app.use('/impressum', ImpressumRouter);
 app.use('/neues', NeuesRouter);
 app.use('/ivk', IVKRouter);
+app.use('/faecher/fachbuch', FachbuchRouter);
+app.use('/arbeitsgemeinschaft-auschwitz', ArbeitsgemeinschaftAuschwitz);
 
 // all general routes
 const GeneralRouteMappings = [
     { route: 'arbeitsgemeinschaften', router: 'arbeitsgemeinschaftenRouter' },
     { route: 'ehemaligenverein', router: 'ehemaligenvereinRouter' },
-    { route: 'fachbuch', router: 'fachbuchRouter' },
     { route: 'faecher', router: 'fächerRouter' },
     { route: 'foerderverein', router: 'fördervereinRouter' },
     { route: 'haus-und-schulordnung', router: 'hausUndSchulordnungRouter' },
