@@ -5,26 +5,54 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+<style>
+    .chaos-list {
+        list-style-type: none;
+        position: relative;
+    }
+    
+    .chaos-list li {
+        font-size: 30px;
+        font-weight: 500;
+        position: absolute;
+        left: calc(100vw * var(--random-x));
+        top: calc(100vh * var(--random-y));
+        transform: translate(-100%, -100%);
+    }
+    
+    .chaos-list li {
+        transition: font-size 0.15s ease-in-out, transform 3s ease;
+    }
+    
+    .chaos-list li:hover {
+        transition: font-size 0.15s ease-in-out, transform 3s ease;
+    }
+    
+    .chaos-list li a:hover {
+        color: #4d87c7;
+    }
+</style>
 
 <body>
-    <main class="main-content rw-flex">
+    <main class="main-content">
 
-        <div class="rw-flex" style="width: 95%;justify-content:space-between;">
-            <ul class="inner-list faecher-list-content">
-                <li><a href="/differenzierungskurs-biologie-chemie">Biologie/ Chemie</a></li>
-                <li><a href="/biologiesport">Biologie/ Sport</a></li>
-                <li><a href="/deutschgeschichte">Deutsch/ Geschichte</a></li>
-                <li><a href="/kunstpolitik">Kunst/ Politik</a></li>
-                <li><a href="/mathematikinformatik">Mathematik/ Informatik</a></li>
-                <li><a href="/physiktechnik">Physik/ Technik</a></li>
-                <li><a href="/node/2119">Französisch</a></li>
-                <li><a href="/spanisch-0">Spanisch</a></li>
-                <li>
-                    <a class="color-link" href="/faecher">Zu den standard Fächern</a>
-                </li>
-            </ul>
+        <div class="FaecherListMain">
+            <div class="chaos-list-wrapper">
+                <ul class="chaos-list">
+                    <li style="--random-x: 0.3; --random-y: 0.1;"><a href="/differenzierungskurs-biologie-chemie">Biologie/ Chemie</a></li>
+                    <li style="--random-x: 0.7; --random-y: 0.3;"><a href="/biologiesport">Biologie/ Sport</a></li>
+                    <li style="--random-x: 0.6; --random-y: 0.05;"><a href="/deutschgeschichte">Deutsch/ Geschichte</a></li>
+                    <li style="--random-x: 0.4; --random-y: 0.4;"><a href="/kunstpolitik">Kunst/ Politik</a></li>
+                    <li style="--random-x: 0.6; --random-y: 0.2;"><a href="/mathematikinformatik">Mathematik/ Informatik</a></li>
+                    <li style="--random-x: 0.6; --random-y: 0.45;"><a href="/physiktechnik">Physik/ Technik</a></li>
+                    <li style="--random-x: 0.2; --random-y: 0.3;"><a href="/node/2119">Französisch</a></li>
+                    <li style="--random-x: 0.3; --random-y: 0.5;"><a href="/spanisch-0">Spanisch</a></li>
+                    <li style="--random-x: 0.5; --random-y: 0.3;"><a class="color-link" href="/faecher">Zu den standard Fächern</a></li>
+                </ul>
+            </div>
 
-            <div class="MaxWidth rw-flex" style="justify-content:center;">
+
+            <!-- <div class="MaxWidth rw-flex" style="justify-content:center;">
                 <div>
                     <img src=<%- locals.faecherIMG %>>
                 </div>
@@ -32,11 +60,28 @@
                 <div class=<%- locals.fachContentWidth || "MaxWidth" %> >
                     <%- include(locals.fachContent || "./empty.ejs") %>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
     </main>
 </body>
+
+<script>
+    function getRandomPosition() {
+        return (Math.random() * 30); // Adjust the range and magnitude of the random movement
+    };
+
+    const items = document.querySelectorAll('.chaos-list li');
+
+    setInterval(() => {
+        items.forEach(item => {
+            const randomX = getRandomPosition();
+            const randomY = getRandomPosition();
+
+            item.style.transform = `translate(calc( -100% + ${randomX}px), calc(-100% + ${randomY}px))`; // Specify 'px' units
+        });
+    }, 100);
+</script>
 
 </html>

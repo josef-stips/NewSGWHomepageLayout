@@ -5,92 +5,99 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+<style>
+    .chaos-list {
+        list-style-type: none;
+        position: relative;
+    }
+    
+    .chaos-list li {
+        font-size: 30px;
+        font-weight: 500;
+        position: absolute;
+        left: calc(100vw * var(--random-x));
+        top: calc(100vh * var(--random-y));
+        transform: translate(-100%, -100%);
+    }
+    
+    .chaos-list li {
+        transition: font-size 0.15s ease-in-out, transform 3s ease;
+    }
+    
+    .chaos-list li:hover {
+        transition: font-size 0.15s ease-in-out, transform 3s ease;
+    }
+    
+    .chaos-list li a:hover {
+        color: #4d87c7;
+    }
+</style>
 
 <body>
-    <main class="main-content rw-flex">
+    <main class="main-content">
 
-        <div class="rw-flex" style="width: 95%;justify-content:space-between;">
+        <div class="FaecherListMain">
 
-            <ul class="inner-list faecher-list-content">
-                <li><a href="/deutsch">Deutsch</a></li>
-                <li>
-                    <a href="/englisch">Englisch</a>
-                </li>
-                <li>
-                    <a href="/franzoesisch">Französisch</a>
-                </li>
-                <li>
-                    <a href="/spanisch">Spanisch</a>
-                </li>
-                <li>
-                    <a href="/latein">Latein</a>
-                </li>
-                <li>
-                    <a href="/kunst">Kunst</a>
-                </li>
-                <li>
-                    <a href="/musik">Musik</a>
-                </li>
-                <li>
-                    <a href="/faecher/fachbuch/literatur">Literatur</a>
-                </li>
-                <li>
-                    <a href="/geschichte">Geschichte</a>
-                </li>
-                <li>
-                    <a href="/erdkunde">Erdkunde</a>
-                </li>
-                <li>
-                    <a href="/sozialwissenschaften-politik-0">Sozialwissenschaften / Politik</a>
-                </li>
-                <li>
-                    <a href="/paedagogik">Pädagogik</a>
-                </li>
-                <li>
-                    <a href="/philosophie">Philosophie</a>
-                </li>
+            <div class="chaos-list-wrapper">
 
-                <li>
-                    <a href="/node/2609" class="rw-flex">
-                        Mathematik
-                    </a>
-                </li>
-                <li>
-                    <a href="/fachbereich-physik">Physik</a>
-                </li>
-                <li>
-                    <a href="/chemie">Chemie</a>
-                </li>
-                <li>
-                    <a href="/biologie">Biologie</a>
-                </li>
-                <li>
-                    <a href="/evangelische-religion">Ev. Religion</a>
-                </li>
-                <li>
-                    <a href="/katholische-religion">Kath. Religion</a>
-                </li>
-                <li>
-                    <a href="/sport">Sport</a>
-                </li>
-                <li>
-                    <a class="color-link" href="/wahlpflichtfaecher-89">Interessiert an Wahlpflichtfächern?</a>
-                </li>
-            </ul>
+                <ul class="chaos-list">
 
-            <div class="MaxWidth">
-                <div>
-                    <img src=<%- locals.faecherIMG %> >
-                </div>
+                    <li style="--random-x: 0.1; --random-y: 0.05;"><a href="/deutsch">Deutsch</a></li>
+                    <li style="--random-x: 0.3; --random-y: 0.25;"><a href="/englisch">Englisch</a></li>
+                    <li style="--random-x: 0.5; --random-y: 0.6;"><a href="/franzoesisch">Französisch</a></li>
+                    <li style="--random-x: 0.7; --random-y: 0.45;"><a href="/spanisch">Spanisch</a></li>
+                    <!-- Add more list items with different --random-x and --random-y values -->
+                    <li style="--random-x: 0.2; --random-y: 0.5;"><a href="/latein">Latein</a></li>
+                    <li style="--random-x: 0.5; --random-y: 0.0;"><a href="/kunst">Kunst</a></li>
+                    <li style="--random-x: 0.6; --random-y: 0.3;"><a href="/musik">Musik</a></li>
+                    <li style="--random-x: 0.4; --random-y: 0.7;"><a href="/faecher/fachbuch/literatur">Literatur</a></li>
+                    <li style="--random-x: 0.7; --random-y: 0.3;"><a href="/geschichte">Geschichte</a></li>
+                    <li style="--random-x: 0.3; --random-y: 0.7;"><a href="/erdkunde">Erdkunde</a></li>
+                    <li style="--random-x: 0.4; --random-y: 0.1;"><a href="/sozialwissenschaften-politik-0">Sozialwissenschaften / Politik</a></li>
+                    <li style="--random-x: 0.7; --random-y: 0.7;"><a href="/paedagogik">Pädagogik</a></li>
+                    <li style="--random-x: 0.5; --random-y: 0.2;"><a href="/philosophie">Philosophie</a></li>
+                    <li style="--random-x: 0.4; --random-y: 0.4;"><a href="/node/2609" class="rw-flex">Mathematik</a></li>
+                    <li style="--random-x: 0.6; --random-y: 0.6;"><a href="/fachbereich-physik">Physik</a></li>
+                    <li style="--random-x: 0.8; --random-y: 0.4;"><a href="/chemie">Chemie</a></li>
+                    <li style="--random-x: 0.2; --random-y: 0.3;"><a href="/biologie">Biologie</a></li>
+                    <li style="--random-x: 0.3; --random-y: 0.5;"><a href="/evangelische-religion">Ev. Religion</a></li>
+                    <li style="--random-x: 0.6; --random-y: 0.1;"><a href="/katholische-religion">Kath. Religion</a></li>
+                    <li style="--random-x: 0.1; --random-y: 0.6;"><a href="/sport">Sport</a></li>
+                    <li style="--random-x: 0.6; --random-y: 0.5;"><a class="color-link bc-theme" href="/wahlpflichtfaecher-89">Interessiert an Wahlpflichtfächern?</a></li>
+                </ul>
 
-                <div class=< %- locals.fachContentWidth || "MaxWidth" %> >
-                    <%- include(locals.fachContent || "./empty.ejs") %>
-                </div>
+                <!-- <div class="MaxWidth">
+                    <div>
+                        <img src=<%- locals.faecherIMG %> >
+                    </div>
+    
+                    <div class=< %- locals.fachContentWidth || "MaxWidth" %> >
+                        <%- include(locals.fachContent || "./empty.ejs") %>>
+                    </div>
+                </div> -->
+
             </div>
-
         </div>
+
 
     </main>
 </body>
+
+<script>
+    function getRandomPosition() {
+        return (Math.random() * 30); // Adjust the range and magnitude of the random movement
+    };
+
+    const items = document.querySelectorAll('.chaos-list li');
+
+    setInterval(() => {
+        items.forEach(item => {
+            const randomX = getRandomPosition();
+            const randomY = getRandomPosition();
+
+            item.style.transform = `translate(calc( -100% + ${randomX}px), calc(-100% + ${randomY}px))`; // Specify 'px' units
+        });
+    }, 100);
+</script>
 
 </html>
