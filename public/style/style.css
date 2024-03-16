@@ -5,6 +5,7 @@ body {
     background-color: var(--font-color-reverse);
     transition: background-color 0.25s ease-out;
     width: 100%;
+    overflow-x: hidden;
 }
 
 * {
@@ -301,6 +302,13 @@ a:hover {
     color: #b12f6c;
 }
 
+#canvas {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
 
 /* header */
 
@@ -431,7 +439,7 @@ main {
     position: fixed;
     height: 100vh;
     width: 24.5%;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: -50vh;
     opacity: 0;
@@ -552,6 +560,7 @@ main {
 
 .main-box-grid .box {
     opacity: 0;
+    z-index: 1;
     /* modify in main.js */
 }
 
@@ -588,6 +597,7 @@ footer {
     height: 70%;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .footer-wrapper div {

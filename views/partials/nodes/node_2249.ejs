@@ -13,7 +13,7 @@
         <h1>Anmeldung</h1>
         <h4>Bitte kommen Sie zu den Anmeldegesprächen in das Nebengebäude des Gymnasiums (Schillerstr.) und folgen den Hinweisschildern.</h4>
 
-        <div class="box-grid">
+        <div class="grid-container main-box-grid">
             <a class="no-color-on-hover" href="/node/2250">
                 <div class="box">
                     <h1 class="fa-solid fa-person" style="font-size: 80px;"></h1>
@@ -55,5 +55,21 @@
 
     </div>
 </body>
+
+<script>
+    let mainBoxGridForAnmaeldung = document.querySelector(".main-box-grid");
+
+    // When page is loaded the main boxes get a fade in animation
+    function MainBoxesAnimation() {
+        for (const [i, val] of[...mainBoxGridForAnmaeldung.children].entries()) {
+            let boxes = val.children[0];
+
+            setTimeout(() => {
+                boxes.style.opacity = "1";
+            }, 100);
+        };
+    };
+    MainBoxesAnimation();
+</script>
 
 </html>
