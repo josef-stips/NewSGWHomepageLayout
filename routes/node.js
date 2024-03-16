@@ -96,7 +96,7 @@ const NodeTitles = [
     '..\\views\\partials\\nodes\\node_2548.ejs',
     'Anmeldung Kl. 6',
     '..\\views\\partials\\nodes\\node_2594.ejs',
-    '..\\views\\partials\\nodes\\node_2609.ejs',
+    'Mathematik',
     '..\\views\\partials\\nodes\\node_2610.ejs',
     'Anmeldung EF',
     '..\\views\\partials\\nodes\\node_2698.ejs',
@@ -112,7 +112,7 @@ router.get('/', (req, res) => {
 
 // create each route with its content
 NodeRoutes.forEach((route, i) => {
-    if (route !== 2119) {
+    if (route !== 2119 && route !== 2609) {
 
         router.get(`/${route}`, (req, res) => {
             res.render("layout", {
@@ -121,7 +121,7 @@ NodeRoutes.forEach((route, i) => {
             });
         });
 
-    } else { // französisches Wahlpflichtfach
+    } else if (route === 2119) { // französisches Wahlpflichtfach
 
         router.get(`/${route}`, (req, res) => {
             res.render("layout", {
@@ -130,6 +130,17 @@ NodeRoutes.forEach((route, i) => {
                 fachContent: '../nodes/node_2119.ejs',
             });
         });
+
+    } else if (route === 2609) { // mathematik fach
+
+        router.get(`/${route}`, (req, res) => {
+            res.render("layout", {
+                title: `${NodeTitles[i]} | Städtisches Gymnasium Wermelskirchen`,
+                mainContent: '../views/partials/general/faecher.ejs',
+                fachContent: '../nodes/node_2609.ejs',
+            });
+        });
+
     };
 });
 

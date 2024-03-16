@@ -180,6 +180,11 @@ a:hover {
     color: #4d87c7;
 }
 
+.color-box-title-large-text {
+    font-size: 30px;
+    color: #4d87c7;
+}
+
 .img-small {
     width: 20%;
 }
@@ -275,9 +280,11 @@ a:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    row-gap: 6em;
     width: 100%;
+    justify-items: center;
+    align-items: center;
 }
 
 .grid-item img {
@@ -348,7 +355,7 @@ a:hover {
     flex-direction: column;
     border-bottom: solid 3px var(--font-color);
     filter: blur(2px);
-    border-radius: 53% 0% 100% 17% / 0% 0% 100% 6%;
+    border-radius: 100% 0% 100% 17% / 0% 10% 100% 17%;
 }
 
 
@@ -392,6 +399,9 @@ main {
 .main-bar-middle {
     width: 100%;
     height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-content {
@@ -400,15 +410,12 @@ main {
     display: flex;
     justify-content: start;
     align-items: start;
-    padding: 40px 0 0 20px;
+    padding: 30px 0 0 0;
     flex-direction: column;
     gap: 1em;
     color: var(--font-color);
-    /*  */
-    /* height: 45vh; */
-    width: 100%;
-    justify-content: flex-start;
-    /* margin-top: 3em; */
+    width: 90%;
+    justify-content: center;
     margin-bottom: 100px;
     align-items: center;
 }
@@ -572,20 +579,15 @@ footer {
     color: var(--font-color);
     padding-top: 2em;
     border-top: 2px solid var(--font-color);
+    padding: 55px 0 100px 0;
 }
 
 .footer-wrapper {
-    display: flex;
+    color: var(--light-font-color);
     width: 100%;
     height: 70%;
-    gap: 2em;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    opacity: 0;
-    animation: fade linear;
-    animation-timeline: view();
-    animation-range: entry 50% cover 20%;
+    justify-content: center;
 }
 
 .footer-wrapper div {
@@ -682,4 +684,29 @@ footer {
     to {
         opacity: 1;
     }
+}
+
+
+/* queries */
+
+@media only screen and (max-width: 767px) {
+    .title-text {
+        font-size: 35px;
+    }
+    .homepage-image-slideshow {
+        height: 40vh;
+    }
+    .align-div {
+        height: calc(40vh - 65px);
+    }
+    .grid-container {
+        gap: 10vh;
+    }
+    footer {
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS für Tablets hier */
 }
