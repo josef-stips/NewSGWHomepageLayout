@@ -2,7 +2,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight * 2;
+canvas.height = window.innerHeight * 3.5;
 
 const circles = [];
 const numCircles = 10;
