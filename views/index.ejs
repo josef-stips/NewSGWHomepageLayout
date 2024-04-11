@@ -10,47 +10,52 @@
 </head>
 
 <body>
-    <!-- top header -->
-    <header class="site-header">
 
-        <div class="header-left-inner header-inner-wrapper">
-            <nav>
-                <ul>
-                    <li><img src="assets/dummy_100x100_ffffff_cccccc.png" alt="sgw logo" width="40" height="40"></li>
-                    <li><i class="fa-solid fa-bars hover-item HeaderBars" style="color:white;"></i></li>
-                </ul>
-            </nav>
+    <!-- class: main-page-header-style (main pages) || page-header-style (all other pages) -->
+    <div class= <%= locals.pageheaderstyle || "page-header-style" %> >
+        <!-- top header -->
+        <header class="site-header">
+
+            <div class="header-left-inner header-inner-wrapper">
+                <nav>
+                    <ul>
+                        <li><img src="assets/dummy_100x100_ffffff_cccccc.png" alt="sgw logo" width="40" height="40"></li>
+                        <li><i class="fa-solid fa-bars hover-item HeaderBars" style="color:white;"></i></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-right-inner header-inner-wrapper">
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/login" class="fa-solid fa-user hover-item user-icon" style="color:white;"></a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-moon hover-item theme-btn" style="color:white;"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- big bg image with big title -->
+        <div class="homepage-image-slideshow">
+
         </div>
 
-        <div class="header-right-inner header-inner-wrapper">
-
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/login" class="fa-solid fa-user hover-item user-icon" style="color:white;"></a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-moon hover-item theme-btn" style="color:white;"></i>
-                    </li>
-                </ul>
-            </nav>
+        <!-- absolute position -->
+        <div class="title-text">
+            <h1>Städtisches Gymnasium</h1>
+            <h4>Wermelskirchen</h4>
         </div>
 
-    </header>
-
-    <!-- big bg image with big title -->
-    <div class="homepage-image-slideshow">
-    </div>
-
-    <!-- absolute position -->
-    <div class="title-text">
-        <h1>Städtisches Gymnasium</h1>
-        <h4>Wermelskirchen</h4>
-    </div>
-
-    <!-- purpose: The above elements are absolute which means the main element would be under the above elements.
-    to align everything one by one this normal div without content has the same height as the slide show/header elements above -->
-    <div class="align-div">
+        <!-- purpose: The above elements are absolute which means the main element would be under the above elements.
+        to align everything one by one this normal div without content has the same height as the slide show/header elements above -->
+        <div class="align-div">
+        </div>
     </div>
 
     <!-- main body -->
@@ -227,10 +232,8 @@
         </div>
 
         <!-- middle main content -->
-        <div class="main-bar-middle ">
-
+        <div class="main-bar-middle <%= locals.pageheaderstyle ? 'mainPageStyle-mainBarMiddle' : '' %> <%= locals.alternativeMainPageStyle ? 'alternativeMainBarMiddle' : '' %> ">
             <%- include(mainContent) %>
-
         </div>
 
         <!-- right site bar -->
@@ -327,15 +330,16 @@
 
     </main>
 
-    <span class="AboveFooterInfo">
-        <a href="/"><h3>Startseite</h3></a>
-        <p>|</p>
-        <a href="/kontakt"><h3>Kontakt</h3></a>
-        <p>|</p>
-        <a href="/impressum"><h3>Impressum</h3></a>
-    </span>
-
     <footer>
+
+        <span class="AboveFooterInfo">
+            <a href="/"><h3>Startseite</h3></a>
+            <p>|</p>
+            <a href="/kontakt"><h3>Kontakt</h3></a>
+            <p>|</p>
+            <a href="/impressum"><h3>Impressum</h3></a>
+        </span>
+
         <div class="footer-wrapper grid-container">
 
             <div>

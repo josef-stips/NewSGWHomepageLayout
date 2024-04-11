@@ -285,7 +285,7 @@ a:hover {
     row-gap: 6em;
     width: 100%;
     justify-items: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .grid-item img {
@@ -307,6 +307,11 @@ a:hover {
     z-index: -1;
     top: 0;
     left: 0;
+}
+
+.second-class-title {
+    color: darkslateblue;
+    font-size: xx-large;
 }
 
 
@@ -366,6 +371,17 @@ a:hover {
     border-radius: 100% 0% 100% 17% / 0% 10% 100% 17%;
 }
 
+.main-page-header-style .homepage-image-slideshow {
+    height: 55vh;
+    filter: blur(2px);
+}
+
+.page-header-style .homepage-image-slideshow {
+    height: 20vh;
+    filter: none;
+    border-radius: unset;
+}
+
 
 /* other */
 
@@ -391,33 +407,56 @@ a:hover {
     width: 100%;
 }
 
+.page-header-style .title-text {
+    font-size: 50px;
+    top: 0;
+    gap: 0;
+}
+
+.main-page-header-style .align-div {
+    height: calc(15vh - 65px);
+}
+
+.page-header-style .align-div {
+    height: calc(20vh - 65px);
+}
+
 
 /* main body */
 
 main {
     height: max-content;
     width: 100%;
-    padding: 10px 0 0 0;
+    padding: 10px 0 10px 0;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .main-bar-middle {
-    width: 100%;
+    width: 75%;
     height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+.mainPageStyle-mainBarMiddle {
+    padding-top: 40vh;
+}
+
+.alternativeMainBarMiddle {
+    box-shadow: none;
+    -webkit-box-shaodw: none;
 }
 
 .main-content {
-    width: 90%;
     height: max-content;
     display: flex;
-    justify-content: start;
-    align-items: start;
     padding: 30px 0 0 0;
     flex-direction: column;
     gap: 1em;
@@ -439,7 +478,7 @@ main {
     position: fixed;
     height: 100vh;
     width: 24.5%;
-    z-index: 2;
+    z-index: 100;
     top: 0;
     left: -50vh;
     opacity: 0;
@@ -576,6 +615,8 @@ main {
     animation: fade linear;
     animation-timeline: view();
     animation-range: entry 50% cover 10%;
+    position: absolute;
+    bottom: 100%;
 }
 
 footer {
@@ -589,6 +630,8 @@ footer {
     padding-top: 2em;
     border-top: 2px solid var(--font-color);
     padding: 55px 0 100px 0;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-wrapper {
@@ -680,7 +723,7 @@ footer {
     flex-direction: column;
     gap: 0.5em;
     padding: 20px;
-    border: 2px solid var(--font-color);
+    /* border: 2px solid var(--font-color); */
     border-radius: 20px;
 }
 
@@ -695,6 +738,18 @@ footer {
 .FaecherListMain {
     width: 90vw;
     height: 70vh;
+}
+
+
+/* foerderverein */
+
+.Foerderverein-header-wrapper {
+    background-image: url("../assets/sgw-official/Download.png");
+    background-attachment: local;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: content-box;
 }
 
 

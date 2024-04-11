@@ -3,8 +3,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
     res.render("layout", {
-        fachContent: '../faecher/differenzierungskurs-biologie-chemie.ejs',
-        mainContent: '../views/partials/general/wahlpflichtfaecher-89.ejs',
+        mainContent: '../views/partials/faecher/differenzierungskurs-biologie-chemie.ejs',
         title: "Diff. Biologie/ Chemie | Städtisches Gymnasium Wermelskirchen"
     })
 });

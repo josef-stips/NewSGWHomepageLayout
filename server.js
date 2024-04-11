@@ -96,7 +96,11 @@ routeMappings.forEach(({ route, router }) => {
 
 // navigation
 app.get('', (req, res) => {
-    res.render("layout", { mainContent: '../views/partials/HomePageContent.ejs', title: "Städtisches Gymnasium Wermelskirchen" });
+    res.render("layout", {
+        mainContent: '../views/partials/HomePageContent.ejs',
+        title: "Städtisches Gymnasium Wermelskirchen",
+        pageheaderstyle: "main-page-header-style"
+    });
 });
 
 // set up 404 page
