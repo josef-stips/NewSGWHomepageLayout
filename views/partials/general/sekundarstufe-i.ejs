@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%- title %>
+    </title>
+</head>
+
+<style>
+     :root {
+        --table-bg: #f2f2f2;
+    }
+    
+    .termine-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    .termine-table td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    .termine-table tr:nth-child(even) {
+        background-color: var(--table-bg);
+    }
+    
+    .termine-table th {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    .dark-theme {
+        --table-bg: #424242;
+    }
+    
+    .back_btn {
+        position: fixed;
+        padding: 10px;
+        padding-left: 15px;
+        background-color: #4d87c7;
+        font-weight: 600;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        inset: 0 0 0 90%;
+        margin: auto 0 auto auto;
+        color: var(--font-color);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: max-content;
+        width: max-content;
+        cursor: pointer;
+    }
+    
+    .back_btn_arrow {
+        transition: transform 0.15s ease-in-out;
+    }
+    
+    .back_btn_arrow:hover {
+        transition: transform 0.15s ease-in-out;
+        transform: scale(1.1);
+        color: var(--font-color);
+    }
+</style>
+
+<body>
+    <span class="back_btn"><a href="#main" class="fa-solid fa-arrow-up back_btn_arrow"></a></span>
+
+    <main class="main-content">
+        <a name="main"></a>
+        <h1>Sekundarstufe I</h1>
+        <h4>Warum eigentlich Berufsorientierung ab Klasse 8?</h4>
+
+
+        <div class="center" style="flex-direction: column;">
+            <p>
+                Du hast Fragen zu deiner beruflichen Zukunft oder den verschiedenen Modulen der Berufsberatung?
+            </p>
+
+            <p>
+                Dann komm doch einfach in die Sprechstunde der Berufsberatung! Immer dienstags in der 7. Stunde (außer an Konferenztagen).
+            </p>
+
+            <br>
+
+            <p>Mehr Informationen zur konkreten Umsetzung der einzelnen Bausteine an unserer Schule findet ihr in den folgenden Punkten</p>
+        </div>
+
+        <br>
+        <h3 style="display: flex;
+            align-self: center;
+            margin-top: 1em;
+            flex-direction: column;
+            align-items: center;">
+            <ul class="rw-flex" style="gap: 2em;width:max-content;">
+                <li><a class="pk-theme" href="#1">Termine 2023/24</a></li>
+                <li><a class="pk-theme" href="#2">Berufswahlpass NRW</a></li>
+                <li><a class="pk-theme" href="#6">Bergischer Ausbildungstag</a></li>
+            </ul>
+
+            <ul class="rw-flex" style="gap: 2em;margin-top:1em;">
+                <li><a class="bc-theme" href="#3">Potenzialanalyse der Stufe 8</a></li>
+                <li><a class="bc-theme" href="#4">"Shadowing-Day" - das Eintagespraktikum</a></li>
+                <li><a class="bc-theme" href="#7">Informationsveranstaltung "Bildungswege"</a></li>
+
+            </ul>
+
+            <ul class="rw-flex" style="gap: 2em;margin-top:1em;">
+                <li><a class="pk-theme" href="#5">Girls' and Boys'Day</a></li>
+                <li><a class="pk-theme" href="#9">Geva - Berufwahltest in Stufe 9</a></li>
+                <li><a class="pk-theme" href="#8">Berufsfeldtag I</a></li>
+            </ul>
+
+            <ul class="rw-flex" style="gap: 2em;margin-top:1em;">
+                <li><a class="bc-theme" href="#10">Berufsorientierungsgespräch</a></li>
+                <li><a class="bc-theme" href="#13">Berufskolleg - eine Alternative</a></li>
+                <li><a class="bc-theme" href="#14">Berufsberatung der Arbeitsagentur</a></li>
+            </ul>
+
+            <ul class="rw-flex" style="gap: 2em;margin-top:1em;">
+                <li><a class="pk-theme" href="#12">Studien- und Berufsmessen</a></li>
+                <li><a class="pk-theme" href="#15">Schultour "Wir in Wermelskirchen" (WiW)</a></li>
+                <li><a class="pk-theme" href="#11">Praktikumsplätze</a></li>
+            </ul>
+        </h3>
+        <br>
+
+        <hr align="center" width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex">
+                <img src="assets/termine.jpg" class="img-half-round-right">
+
+                <a name="1"></a>
+                <div class="inner-list">
+                    <h2 class="second-class-title">Termine 2023/24</h2>
+                    <p>
+                        Aktuelle Termine der Studien- und Berufsorientierung in der Sekundarstufe I.
+                    </p>
+
+                    <br>
+
+                    <table class="termine-table">
+                        <tr>
+                            <th>Datum und Uhrzeit</th>
+                            <th>Veranstaltung</th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Mi., 16.08.2023 <br> 18.30 Uhr
+                            </td>
+                            <td>
+                                zentrale Informationsveranstaltung zur Berufsorientierung (Stufe 8)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Mi., 18.10.2023 <br> 18.00 Uhr - Online!
+                            </td>
+                            <td>
+                                Informationsabend für Eltern und Schüler:innen zur Potenzialanalyse (Stufe 8)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Fr., 20.10. - Mi., 25.10.2023
+                            </td>
+                            <td>
+                                Potenzialanalyse (Stufe 8) Rückmeldegespräche jeweils am Folgetag
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Do., 09.11.2023 <br> ganztägig
+                            </td>
+                            <td>
+                                Shadowing-Day (Stufe 9)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Mo., 15.04.2024 <br> ganztägig
+                            </td>
+                            <td>
+                                Shadowing Day (Stufe 8)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Do., 25.04.2024 <br> ganztägig
+                            </td>
+                            <td>
+                                Girls'Day & Boys'Day (Stufe 8 und Stufe 9)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <a name="2"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Berufswahlpass NRW</h2>
+
+                    <br>
+
+                    <p>
+                        In der Stufe 8 erhaltet ihr den Ordner "Berufswahlpass NRW", in den ihr alle für eure zukünftige Berufswahl relevanten Informationen sowie die bewerbungsrelevanten Informationen aus dem Fachunterricht abheften könnt. Eine Anleitung zum Umgang mit dem
+                        Berufswahlpass findet ihr hier. Zugleich enthält er auch für die Berufsfindung wichtige Informationen.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Im Berufswahlpass könnt ihr Folgendes abheften:
+                    </p>
+
+                    <ol type="A" class="big-lh">
+                        <li>Checkliste für alle Berufswahlaktivitäten (8.1)</li>
+                        <li>Ergebnis der Potenzialanalyse (8.1)</li>
+                        <li>Berufsinteressentest (Berufe-Universum) (9.1)</li>
+                        <li>Eure Unterlagen zum Thema Berufsorientierung und Bewerbung aus dem Fach Deutsch (9.1)</li>
+                        <li>Erkundungsbogen Bergischer Ausbildungstag (9.1)</li>
+                        <li>Berufsfelderkundungsunterlagen im Fach Politik (9.1)</li>
+                        <li>"Shadowing-Day"-Unterlagen (Bescheinigung) (8.2/9.1)</li>
+                        <li>"Girls' & Boys'Day" - Bescheinigungen (mindestens eine, 9.2)</li>
+                        <li>Referat zum Berufsreflexionsgespräch (9.2)</li>
+                        <li>zweiwöchiges Schülerbetriebspraktikum (10.1)</li>
+                    </ol>
+
+                    <p>Am Ende der Klasse 10 wird der Ordner im Rahmen der Berufsreflexionsgespräche kontrolliert.</p>
+                </div>
+
+                <img src="assets/berufs_ordner.jpg" class="img-half-round-left">
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex">
+                <img src="assets/berufs_bild.jpg" class="img-half-round-right">
+                <a name="3"></a>
+                <div class="inner-list clm-flex">
+                    <h2 class="second-class-title">Potenzialanalyse der Stufe 8</h2>
+
+                    <br>
+
+                    <p>
+                        Der Kompetenzcheck "Potenzialanalyse" ist eine stärkenorientierte Betrachtung der Kinder. Sie beinhaltet eine ganze Reihe verschiedener Aufgaben und Übungen. Die hauptsächlichen Bestandteile sind:
+                    </p>
+
+                    <ol type="A" class="big-lh">
+                        <li>Interessenprofil</li>
+                        <li>Selbst- und Fremdwahrnehmung</li>
+                        <li>Konzentrationstest</li>
+                        <li>Handwerkliche Geschicklichkeit</li>
+                        <li>Rollenspiele</li>
+                    </ol>
+
+                    <p>
+                        Im Rahmen des Kompetenzchecks werden nicht nur Potenziale der Teilnehmenden aufgezeigt, sondern auch mit ihren beruflichen Vorstellungen abgeglichen. Neben zahlreichen Informationen zur Verbesserung bezüglich des beruflichen Werdeganges gewinnen die Schüler*innen
+                        gleichzeitig eine Vorstellung ihrer Fähigkeiten, die sie bisher als Qualität vielleicht noch nicht erkannt haben. Der Kompetenzcheck ergänzt durch neue Aspekte die erste Orientierung in der Berufswahl.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Die Eltern müssen der Teilnahme mit einer <b>Einwilligungserklärung</b> zustimmen und können auch selbst an den Rückmeldegesprächen der Ergebnisse jeweils am Folgetag in der Schule teilnehmen. Die Potenzialanalyse findet für jede
+                        Klasse von 8 - 13 Uhr im Gemeindehaus der Stadtkirche statt. Alle Schüler*innen kommen ganz normal um 7.45 Uhr in ihren Klassenraum und werden von dort zur Stadtkirche geführt. Der Nachmittagsunterricht entfällt. Sie finden weitere
+                        Informationen bei dem
+                        <a href="https://talentbruecke.de/" class="color-link">Anbieter
+                                für unsere Schule</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <a name="4"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">"Shadowing-Day" - das Eintagespraktikum</h2>
+
+                    <br>
+
+                    <p>
+                        Du hast dich immer schon für einen bestimmten Beruf interessiert, kennst den Alltag aber eigentlich gar nicht. Begleite jemanden mit diesem Beruf einen ganzen Tag lang wie sein Schatten und verschaffe dir selbst ein Bild von den Aufgaben, Herausforderungen,
+                        Fähigkeiten und Reizen dieses Berufs.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        An einem Tag im Jahr sollen die Schüler*innen der Jahrgangsstufen 8 und 9 ein Eintagespraktikum in ihrem Traumberuf absolvieren.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Hierzu wendest du dich frühzeitig an einen Betrieb oder eine Einrichtung mit ihrem Wunschberuf und bewirbst dich informell um die Möglichkeit einer eintägigen Hospitation.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        In den meisten Fällen ist zwar eine aktive Mitarbeit aufgrund der Kürze der Zeit kaum möglich, aber der Eindruck der Arbeitsumgebung, die Beobachtungen der Tätigkeit, das Arbeitsklima und zahllose Details werden eine wertvolle Planungshilfe im weiteren
+                        Prozess der Berufsorientierung bilden.
+                    </p>
+
+                    <br>
+
+                    <h3>
+                        Wann der nächste Shadowing-Day für deine Stufe stattfindet, kannst du der Terminübersicht entnehmen.
+                    </h3>
+
+                    <br>
+
+                    <p><b>Durchführung</b></p>
+
+                    <p class="inner-list">
+                        <b>Vor dem Shadowing-Day</b>
+                    </p>
+
+                    <p class="inner-list">
+                        Du wendest dich möglichst früh an ein Unternehmen der Region, in dem du deinen Wunschberuf findest, und bittest dort um die Möglichkeit eines Eintagespraktikums. Zur Unterstützung kannst du das erklärende Schreiben der Schule vorlegen.
+                    </p>
+
+                    <p class="inner-list">
+                        Auf der Teilnahmeerklärung bestätigt das Unternehmen dir den Praktikumsplatz und auch deine Eltern müssen ihr Einverständnis durch ihre Unterschrift erklären. Diese Bestätigung zeigst du der Klassenleitung im Vorfeld zum Shadowing-Day.
+                    </p>
+
+                    <p class="inner-list">
+                        Der Tag selbst ist dann natürlich unterrichtsfrei, aber als schulische Veranstaltung besteht für Hin- und Rückfahrt sowie den ganzen Tag über der gesetzliche Unfallschutz. Eine Haftpflichtversicherung besteht über die Stadt (mit Ausnahme von vorsätzlich
+                        oder grob fahrlässig herbeigeführten Schäden).
+                    </p>
+
+                    <p class="inner-list">
+                        <b>Nach dem Shadowing-Day</b>
+                    </p>
+
+                    <p class="inner-list">
+                        Du zeigst deiner Klassenleitung die Teilnahmebescheinigung und heftest sie schließlich in deinem Berufswahlpass ab.
+                    </p>
+                    <br>
+
+                    <p><b>Wenn du keinen Praktikumsplatz findest...</b></p>
+                    <p class="inner-list">
+                        ... findet für dich ganztägig von 7.45 - 15.00 Uhr Unterricht in der Schule statt. Herr Fröhlingsdorf sorgt für ein umfangreiches Ersatzprogramm, welches Du am Ende des Tages vollständig bearbeitet abgibst, um deine Teilnahmebestätigung zu erhalten.
+                    </p>
+                </div>
+
+                <img src="assets/berufs_bild3.jpg" class="img-half-round-left">
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex">
+                <img src="assets/berufs_bild2.jpg" class="img-half-round-right">
+                <a name="5"></a>
+                <div class="inner-list clm-flex">
+                    <h2 class="second-class-title">Girls' and Boys'Day</h2>
+
+                    <br>
+
+                    <p>
+                        Die Teilnahme an mindestens <i>einem</i> Girls'Day bzw. Boys'Day in Stufe 8 oder 9 ist verpflichtend. Natürlich ist es möglich an beiden Girls and Boys-Days teilzunehmen.
+                    </p>
+
+                    <br>
+
+                    <h4>Wann der nächste Girls'Day bzw. Boys'Day stattfindet, kannst du der <b class="color-link">Terminübersicht</b> entnehmen.</h4>
+
+                    <br>
+
+                    <p>
+                        Der bundesweite Aktionstag „Girls’Day“ oder „Boys’Day“ hat das Ziel, Kindern und Jugendlichen der Stufe 8 und 9 geschlechtsuntypische Berufe vorzustellen. Hierzu öffnen Betriebe und Einrichtungen ihre Türen für ein Eintagespraktikum:
+                    </p>
+
+                    <p>
+                        Mädchen besuchen beispielsweise Autowerkstätten oder Dachdeckerbetriebe, Jungs gehen vielleicht in Kindergärten oder auf Pflegestationen.
+                    </p>
+
+                    <br>
+                    <p>
+                        In jedem Jahr steigt die Zahl der Betriebe sowie der Schüler*innen, die den Tag nutzen, um ganz neue und unerwartete Erfahrungen zu sammeln.
+                    </p>
+
+                    <br>
+
+                    <p>Auf den Homepages</p>
+
+                    <br>
+
+                    <span><a href="www.boys-day.de" target="_blank" class="color-link">www.boys-day.de</a>   bzw.  <a href="www.girls-day.de" target="_blank" class="color-link">www.girls-day.de</a>     erhaltet ihr</span>
+
+                    <br>
+
+                    <ol type="A" class="big-lh">
+                        <li>Vordrucke für die Schulfreistellung</li>
+                        <li>Vordrucke Teilnahmebescheinigung</li>
+                        <li>eine Übersicht teilnehmender Betriebe ("Radar")</li>
+                    </ol>
+
+                    <p>
+                        und viele andere Anregungen und Hilfen.
+                    </p>
+
+                    <br>
+
+                    <p>Für interessierte Unternehmen...</p>
+
+                    <ol type="1" class="big-lh" style="padding: 0;">
+                        <li>... haben wir ein &nbsp;<a href="assets/sgw-official/Girls-Boys-Day - Informationen für Arbeitgeber_0.pdf" class="color-link">Informationsschreiben</a>&nbsp; zusammengestellt.</li>
+                        <li>... finden sich <a href="https://material.kompetenzz.net/girls-day/unternehmen-institutionen" class="color-link">HIER (Girls'Day)</a> bzw. <a href="https://material.kompetenzz.net/boys-day/unternehmen-institutionen" class="color-link">HIER (Boys'Day)</a>Leitfäden
+                            für die Organisation und Durchführung des Tages..</li>
+                    </ol>
+                </div>
+
+            </div>
+
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex">
+                <img src="assets/beruf_bild11.jpg" class="img-half-round-right">
+                <a name="6"></a>
+                <div class="inner-list clm-flex">
+                    <h2 class="second-class-title">Bergischer Ausbildungstag</h2>
+
+                    <br>
+
+                    <p>
+                        In diesem Jahr findet wieder der Bergische Ausbildungstag des Bergischen Berufskollegs 21.10.2023 statt. Zahlreiche Betriebe werden dort wieder ihre Ausbildungsangebote präsentieren.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Attraktive Betriebe und Verbände der Umgebung präsentierten ihre Ausbildungsmöglichkeiten zum Greifen nah.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Viele Schüler*innen zogen in der Vergangenheit eine positive Bilanz. Die Begegnung mit konkreten Firmen verdeutlichte den Schüler*innen eindrucksvoll die Anforderungen einer Berufsausbildung.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Für Interessierte gibt es einen <a href="assets/sgw-official/Erkundungsbogen Bergischer Ausbildungstag.pdf" class="color-link">Erkundungsbogen</a>, der euch beim Besuch helfen kann.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <a name="7"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Informationsveranstaltung "Bildungswege"</h2>
+
+                    <br>
+
+                    <p>
+                        Grundlage jeder individuellen Bildungsentscheidung ist die Kenntnis der vielen verschiedenen Bildungswege. Dabei bietet die Bildungslandschaft in NRW ganz verschiedene Wege an, die nach Abschluss der Klasse 9 (G8) bzw. 10 (G9) in den Beruf und/oder zum
+                        Studium führen.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Auf der zentralen Informationsveranstaltung "Bildungswege" informieren Expert*innen von Arbeitsagentur, Berufskolleg und Gymnasium über die grundsätzlichen weiterführenden Bildungsmöglichkeiten nach Stufe 9/10.
+                    </p>
+
+                    <br>
+
+                    <img src="assets/sgw-official/Download (19).png" alt="" width="50%" height="50%">
+
+                    <br>
+
+                    <p>
+                        Aus den vielen parallelen Möglichkeiten sollte man sich nach individueller Beratung durch die Studien- und Berufsorientierung oder die Klassenleitung den für die eigenen Fähigkeiten und Interessen passenden Berufsweg bewusst auswählen. </p>
+
+                    <br>
+
+                    <h3>Berufsorientierung Online</h3>
+
+                    <br>
+
+                    <p>
+                        Die Informationsveranstaltung "Bildungswege" am 27.01. um 19 Uhr für alle interessierten Eltern und Schüler*innen der Stufe 9 findet dieses Jahr wieder ausschließlich online statt.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Eine Teilnahme über TEAMS ist nur mit Schulaccount möglich. Die Einladung sowie der Teilnahmelink sind bereits per Mail über IServ versandt worden.
+                    </p>
+
+                    <br>
+
+                    <p><b>Wir freuen uns auf Ihr und Euer Kommen!</b></p>
+                </div>
+
+                <img src="assets/beruf_bild10.jpg" class="img-half-round-left">
+            </div>
+
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <a name="8"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Berufsfeldtag I</h2>
+
+                    <br>
+
+                    <p>
+                        Der Berufsfeldtag I (BFT I) ist Teil der Berufsfelderkundung für unserer Schüler*innen der Jahrgangstufen 8 und 9. Ziel dieser nachmittäglichen Veranstaltung ist die konkrete Begegnung mit Referent*innen, die das Berufsbild aus eigener Erfahrung genau
+                        kennen und so als authentische und zuverlässige Vermittler*innen unseren Schüler*innen detaillierte und unverfälschte Schilderungen aus
+                    </p>
+
+                    <ol type="A" class="big-lh">
+                        <li>dem Anforderungsprofil</li>
+                        <li>dem Arbeitsalltag</li>
+                        <li>dem Ausbildungsweg</li>
+                        <li>den Berufsperspektiven</li>
+                        <li>dem besonderen Reiz</li>
+                        <li>den Schwierigkeiten des Berufs liefern können.</li>
+                    </ol>
+
+                    <br>
+
+                    <p>
+                        Die Schüler*innen können dann nach einem Kurzvortrag der Referent*innen Fragen stellen, durch die sich ihr Bild des Berufs verdichtet. Jede*r Schüler*in kann sich über zwei Berufe innerhalb von jeweils 30 Minuten informieren.
+                    </p>
+
+                    <p>
+                        Dies werden ebenso spannende wie wichtige Informationen sein, die aus erster Hand stammen. Als Referent*innen haben sich zahlreiche Eltern und Mitarbeitende lokaler Unternehmen bereit erklärt.
+                    </p>
+
+                    <br>
+
+                    <p>Der nächste Berufsfeldtag I findet statt am: <b>Termin steht noch nicht fest. (voraussichtlich im Juni 2024)</b></p>
+
+                    <p>
+                        Für den Fall, dass Sie selbst sich mit Ihren Erfahrungen über einen Ausbildungsberuf als Referent*in bereit erklären oder noch jemanden kennen, den Sie überzeugen: Sie finden hier das Formular zur <a href="assets/sgw-official/BFT I - Anmeldeformular Eltern_0.pdf"
+                            class="color-link">Teilnahme am BFT I</a>.
+                    </p>
+
+                    <br>
+
+                    <p>Wir danken Ihnen im Interesse der Kinder!</p>
+                </div>
+
+                <img src="assets/berufs_bild0.jpg" alt="" class="img-half-round-left">
+            </div>
+
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <img src="assets/berufs_bild5.jpg" alt="" class="img-half-round-right">
+                <a name="9"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Geva - Berufwahltest in Stufe 9</h2>
+                    <h4>Was ist der geva-Test?</h4>
+
+                    <br>
+
+                    <p>
+                        Das Ende der Sekundarstufe I ist eine Schwelle zu einer weiteren Bildungsentscheidung. Um zu einer guten Entscheidung zu kommen, müssen verschiedene Einschätzungen und Beurteilungsgrundlagen zusammenfließen: persönliche Interessen und Neigungen, erworbene
+                        fachliche Kompetenzen, Zielsetzungen für das eigene Leben, Werthaltungen und Kenntnisse über Berufsanforderungen.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Insbesondere die Selbsteinschätzung von Fähigkeiten und Interessen ist für viele schwierig. Ein objektiver, standardisierter Test kann hier helfen, einerseits Orientierungspunkte zu bieten, wie es in der Potenzialanalyse erfolgt ist, andererseits auch
+                        konkrete Berufsvorschläge zu unterbreiten, die man bisher vielleicht nicht in Erwägung gezogen hat. Daher ist der Geva-Test mit konkreten Berufsvorschlägen eine sehr gute Ergänzung zur Potenzialanalyse der Stufe 8.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Der geva-Test „Studium und Beruf“ der Gesellschaft für Verhaltensanalyse und Evaluation (Geva) bietet mit einem umfangreichen Test über 2-3 Stunden die Möglichkeit, die eigenen Stärken und Kompetenzen zu erfassen. Auf dieser Grundlage erhält man am Ende
+                        drei konkrete Berufsvorschläge. Die Auswertung umfasst insgesamt etwa 20 Seiten und kann auch mit Hinweisen auf bis zu 14 weitere Tätigkeiten die Grundlage aller weiteren Berufsplanungen sein. Man kann für die Auswertung auch auswählen
+                        zwischen reinen akademischen Vorschlägen, nur Ausbildungsberufen oder gemischten Vorschlägen.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Der Test ist bereits seit einigen Jahren fester, freiwilliger Bestandteil der Berufsorientierung an unserer Schule. Wir bieten ihn bewusst erst ab Klasse 9 an, da er durchaus anspruchsvoll ist. In seiner Ausrichtung zielt er insgesamt etwas stärker auf
+                        mathematisch-technische und sprachliche Kompetenzen als auf soziale und kreative. Daneben werden aber auch Basiskompetenzen wie Konzentrationsfähigkeit oder räumliches Vorstellungsvermögen getestet. Das Ergebnis kann auch bei der
+                        Wahl der Kurse in der Oberstufe von Nutzen sein, indem ein zukünftiges Studium durch eine gezielte Kurswahl bewusst vorbereitet wird.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Die Kosten für diesen Test, der den Abschluss (Fach-)Abitur annimmt ("<a class="color-link" href="https://www.geva-institut.de/unsere-geva-tests/studienwahl-schule">Studium und Beruf</a>"), betragen ab 10 Teilnehmer*innen 23€ pro
+                        Person (sonst 38€).
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Zu dem Test lädt die Schule die Eltern und Schüler*innen der Stufe 9 rechtzeitig schriftlich ein.
+                    </p>
+
+                    <br>
+
+                    <h3>Geva-Berufswahltest ab Stufe 9</h3>
+
+                    <p>
+                        "Studium und Beruf" - seid ihr noch unsicher in eurer Berufswahl? Auch in diesem Jahr organisiert unsere Schule wieder eine vergünstigte Teilnahme am Berufswahltest des renommierten Münchner <a href="http://www.geva-institut.de/eignungstest-berufswahl-a-berufstest.html"
+                            class="color-link">Geva-Instituts</a> für alle Schüler ab Stufe 9. Die Schulhomepage hält Informationen und ein <a href="assets/sgw-official/Geva-Test Anmeldung.pdf" class="color-link">Anmeldeformular</a> bis zum 13.03.2019 für
+                        euch bereit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <img src="assets/berufs_bild6.jpg" alt="" class="img-half-round-right">
+                <a name="10"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Berufsorientierungsgespräch</h2>
+
+                    <br>
+
+                    <p>
+                        Gegen Ende der Jahrgangsstufe 10 und damit auch dem bevorstehenden Abschluss der Sekundarstufe I findet ein Berufsreflexionsgespräch zwischen dir und deiner Klassenleitung und gerne auch mit deinen Eltern statt.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Zur Vorbereitung des etwa 15-20-minütigen Gesprächs außerhalb der Unterrichtszeit sollst du einen persönlichen Bildungsplan für deine zukünftige Berufsausbildung anhand der folgenden <a href="assets/sgw-official/Berufsorientierungsgespräch - Anleitung  Schüler_innenvortrag.pdf"
+                            class="color-link">Anleitung</a> erstellen. In dem Gespräch stellst du deinen Bildungsplan vor. Deine Klassenleitung wird hierzu kritische Fragen stellen und ein knappes Protokoll führen, das als Dokumentation deiner abgeschlossenen
+                        Berufsorientierung in der Sekundarstufe I in deine Schülerakte kommt.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Zum Gespräch bringt ihr bitte auch eure Berufswahlpässe mit, die kurz auf Vollständigkeit geprüft werden. Eine Checkliste für die Vollständigkeit und richtige Ordnung findet ihr <a href="#2" class="color-link">hier</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <a name="11"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Praktikumsplätze</h2>
+
+                    <br>
+
+                    <p>
+                        <a href="assets/sgw-official/Praktikumsplätze_2021_08.pdf" class="color-link">Hier</a> und <a href="assets/sgw-official/Praktikumsplätze_Liste_2020-06.pdf" class="color-link">Hier</a> findet ihr Angebote von Unternehmen der Region,
+                        die Praktika anbieten.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Nehmt in höflicher Weise Kontakt zu den Unternehmen auf und bewerbt euch um ein Eintagespraktikum!
+                    </p>
+
+                    <br>
+
+                    <p>Unternehmen, die Eintagespraktika anbieten möchten, kontaktieren uns bitte unter</p>
+                    <p><b><a class="color-link" href="mailto:Andreas.Osterkamp (at) wk-gymnasium.de">Andreas.Osterkamp (at) wk-gymnasium.de</a></b></p>
+                </div>
+
+                <img src="assets/beruf_bild9.jpg" alt="" class="img-half-round-left">
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <img src="assets/berufs_bild8.jpg" alt="" class="img-half-round-right">
+                <a name="12"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Studien- und Berufsmessen</h2>
+                    <br>
+
+                    <p>
+                        Was kann es Günstigeres als eine Messe mit den wichtigsten Arbeitgebern und Universitäten geben, die über deine Ausbildungs- und Studienmöglichkeiten informieren?
+                    </p>
+
+                    <br>
+
+                    <p><b>Stuzubi in Köln | 03.09.2022</b></p>
+                    <p>
+                        Universitäten, Hochschulen sowie bundesweit agierende und regionale Unternehmen und Institutionen informieren auf der Stuzubi über ihre Studien- und Ausbildungsangebote sowie Berufsperspektiven. Auch Anbieter für Auslandsaufenthalte und Freiwilligendienste,
+                        Abschlussarbeiten und Traineestellen sind auf der Messe vertreten.
+                    </p>
+                    <a href="https://stuzubi.de/messen/koeln/" class="color-link">Link zur Messe</a>
+
+                    <br>
+
+                    <p><b>Bergisches Career Dating in Lindlar | 15.09.2022</b></p>
+                    <p>
+                        Die Ausbildungsmesse wird jedes Jahr aufs Neue von Unternehmen, in Kooperation mit der Gemeinde Lindlar, für Schülerinnen und Schüler organisiert und von Institutionen wie der IHK Köln und der Agentur für Arbeit unterstützt.
+                    </p>
+                    <p>
+                        Zahlreiche Arbeitgeber aus dem Kreis Oberberg und Rheinberg informieren über eine vielseitige Auswahl an Ausbildungsberufen und weiteren Karrierechancen für Nachwuchskräfte.
+                    </p>
+                    <p>
+                        Darüber hinaus erwartet die Besucher:innen auch ein professionelles Bewerbungsfoto-Shooting.
+                    </p>
+                    <a href="https://www.facebook.com/bergischescareerdating.langacademy" class="color-link">Link zur Messe</a>
+
+                    <br>
+
+                    <p><b>Berufe live – Rheinland in Köln | 04. & 05.11.2022</b></p>
+                    <p>
+                        Diese Messe ist etwas stärker ausbildungsorientiert. Zahlreiche Aussteller präsentieren ihre dualen Studiengänge sowie ihre freien Ausbildungs- und Praktikumsplätze. Messe-Besucher*innen können die Angebote einsehen und das entsprechende Unternehmen gleich
+                        vor Ort kennenlernen.
+                    </p>
+                    <p>
+                        Eine gute Vorbereitung zur Messe ist der kostenlose <a href="https://www.einstieg.com/messen/interessencheck.html" class="color-link">Online-Berufswahltest</a>.
+                    </p>
+                    <a href="https://www.einstieg.com/messen/berufe-live-rheinland.html" class="color-link">Link zur Messe</a>
+
+                    <br>
+
+                    <p><b>HORIZON Düsseldorf | 26.11.2022</b></p>
+                    <ol type="A" class="big-lh" style="padding: 1;margin:0;">
+                        <li>Der Eintritt ist frei, eine Registrierung vorab erforderlich</li>
+                        <li>Zahlreiche Aussteller (Unternehmen, Hochschulen & Gap-Year-Anbieter)</li>
+                        <li>Kostenloser Interessencheck mit Anzeige der passenden Aussteller</li>
+                        <li>Spannende Live-Vorträge in der Speakers Lounge</li>
+                    </ol>
+                    <a href="https://www.horizon-messe.de/duesseldorf/" class="color-link">Link zur Messe</a>
+
+                    <br>
+
+                    <p><b>Stuzubi online | 26.11.2022</b></p>
+                    <p>Die Online-Ausgabe der o.g. Veranstaltung.</p>
+                    <a href="https://stuzubi.de/messen/koeln/" class="color-link">Link zur Messe</a>
+
+                    <br>
+
+                    <p><b>Einstieg Köln | 10. & 11.02.2023</b></p>
+                    <p>Auf der größten Berufswahlmesse im Rheinland können die Besucher:innen sich bei mehreren Hundert Hochschulen, Unternehmen und Organisationen über ihre Ausbildungs-, Studien- und Gap-Year-Angebote informieren. Neben Einblicken in den
+                        Berufsalltag können die Schüler*innen auf der Messe außerdem Unterstützung in Bewerbungsfragen bekommen, ein Bild für den Lebenslauf machen und ihre Unterlagen von Experten checken lassen. Auch hier gibt es einen
+                        <a href="https://www.einstieg.com/kein-plan/berufswahltest.html" class="color-link">kostenlosen Online-Berufswahltest.</a></p>
+                    <a href="https://stuzubi.de/messen/koeln/" class="color-link">Link zur Messe</a>
+
+                    <br>
+
+                    <p><b>Tag der Ausbildung – Radevormwald | 29.04.2023</b></p>
+                    <p>Der Radevormwalder Tag der Ausbildung verbindet eine Ausbildungsmesse mit einem Tag der offenen Tür verschiedener Unternehmen. Interessierte an Ausbildungs-, Praktikums- oder Studienplätzen haben so die Möglichkeit, an einem Tag mehrere
+                        lokale Betriebe kennenzulernen und sich an Messeständen über Aus- und Fortbildungsmöglichkeiten zu informieren.</p>
+                    <a class="color-link" href="https://wirtschaftsfoerderung-radevormwald.de/2023/02/10/tag-der-ausbildung-29-04-2023/">Link zu weiteren Informationen</a>
+
+                    <br>
+
+                    <p><b>Berufe live – Burscheid | 03.06.2023</b></p>
+                    <a href="https://ausbildungsmesse-burscheid.de" class="color-link">Link zur Messe</a>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <img src="assets/berufs_bild7.jpg" alt="" class="img-half-round-right">
+                <a name="13"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Berufskolleg - eine Alternative</h2>
+
+                    <br>
+
+                    <p>
+                        Das Berufskolleg ist eine recht komplexe Schulform, die für Schüler aller Bildungsabschlüsse der Sek I und auch jene ohne Schulabschluss <a href="assets/sgw-official/BK-Struktur.pdf" class="color-link">Bildungsangebote</a> bereithält.
+                        Man kann dort selbst auch alle Schulabschlüsse erwerben: FOR, FHR und AHR.
+                    </p>
+
+                    <img src="assets/sgw-official/Bk1-kl.jpg" alt="" width="40%" height="50%">
+
+                    <br>
+
+                    <p>
+                        Nach Klasse 9 bietet das Berufskolleg je nach Bildungsziel und Leistungssituation ganz verschiedene <a href="assets/sgw-official/BK-nach Stufe 9.pdf" class="color-link">Bildungsgänge</a> an:
+                    </p>
+
+                    <img src="assets/sgw-official/Bk2-kl.jpg" alt="" width="40%" height="50%">
+
+                    <br>
+
+                    <p>
+                        Hier finden Sie eine <a href="assets/sgw-official/Berufskollegs (Bildungswege).pdf" class="color-link">Übersicht</a> über einige Bildungsangebote der umliegenden Berufskollegs mit Abschlüssen, die zum schulischen Teil der Fachhochschulreife
+                        (FHR) oder zur Allgemeinen Hochschulreife (AHR), dem Abitur, führen.
+                    </p>
+                    <br>
+                    <p>
+                        Wichtig sind dabei die Unterscheidungen der vielen verschiedenen Fachrichtungen und eventuellen parallelen Berufsabschlüsse.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <a name="14"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Berufsberatung der Arbeitsagentur</h2>
+
+                    <br>
+
+                    <p>
+                        In Kooperation mit der Arbeitsagentur für Arbeit besucht uns regelmäßig die Beraterin <a href="mailto:Beate.Wess-Etzel@arbeitsagentur.de" class="color-link">Frau Weß-Etzel</a>, die in Raum 170 (Schüler*innenbücherei) interessierte
+                        Schüler*innen und Eltern zu den Themen Ausbildung, Studium und Beruf informiert..
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Weitere Informationen sowie die nächsten Beratungstermine in der Schule findet ihr <a href="/node/2165" class="color-link">HIER</a>.
+                    </p>
+
+                    <br>
+
+                    <h3>Berufsorientierungsbüro BOB</h3>
+
+                    <img src="assets/sgw-official/BOB.jpg" alt="" width="60%" height="60%">
+                    <br>
+
+                    <p>
+                        Das Berufsorientierungsbüro - kurz BOB - befindet sich gemeinsam mit der Schülerbücherei der Mittelstufe in Raum 171. Im BOB finden Beratungsgespräche unserer Berufsberaterin der Agentur für Arbeit, Frau Weß-Etzel, statt. Ebenso können hier Beratungsgespräche
+                        durch die StuBOs nach Vereinbarung durchgeführt werden. Außerdem liegt Informationsmaetrial zur Berufsfindung aus. Das BOB ist Teil der Landesinitiative "Kein Abschluss ohne Anschluss" (KAoA).
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Bei Terminwünschen schreibt ihr einfach eine E-Mail an Herrn Osterkamp.
+                    </p>
+
+                    <br>
+
+                    <h3>Berufsberatung aktuell</h3>
+
+                    <p>
+                        Während des Homeschoolings ist eine Beratung via TEAMS möglich. Den Link zur Terminübersicht erhaltet ihr von Herrn Mattiesson.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Zudem bietet die Arbeitsagentur ein umfangreiches Online-Angebot unter <a class="color-link" href="https://www.arbeitsagentur.de/" target="_blank" rel="noopener noreferrer">https://www.arbeitsagentur.de/</a>. Die Kachel „Schule,
+                        Ausbildung, Studium“ bietet eine Vielzahl von wichtigen Informationen rund um die Studien- und Berufswahl.
+                    </p>
+
+                    <br>
+
+                    <h3>Berufsberatung auf Elternsprechtag</h3>
+
+                    <p>
+                        Die Berufsberaterin der Arbeitsagentur, Frau Weß-Etzel, steht für gemeinsame Gespräche mit Schülern und ihren Eltern am Elternsprechtag, dem 10.05.2019, in Raum 171 (Schülerbücherei / Berufsorientierungsbüro) ohne Voranmeldung bereit. Informieren Sie
+                        sich über Bildungswege und -chancen.
+                    </p>
+                </div>
+
+                <img src="assets/berufs_bild11.jpg" alt="" class="img-half-round-left">
+            </div>
+        </section>
+
+        <br>
+        <hr width="95%">
+        <br>
+
+        <section>
+            <div class="rw-flex" style="justify-content: end;">
+                <img src="assets/berufs_wk.jpg" class="img-half-round-right">
+                <a name="15"></a>
+                <div class="inner-list clm-flex" style="justify-content: start;width:100%;">
+                    <h2 class="second-class-title">Schultour "Wir in Wermelskirchen" (WiW)</h2>
+
+                    <br>
+
+                    <p>
+                        Die "WiW Marketing e.V." unterstützt die Berufsberatung durch die Schultour, die zweimal pro Schuljahr am SGW gastiert. Dabei ordnen sich die Schülerinnen und Schüler verschiedenen Workshops zu, in denen Auszubildende aus Wermelskirchener Unternehmen
+                        ihre Berufe und Ausbildungen vorstellen und Fragen - sozusagen authentisch aus erster Hand - beantworten.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Weitere Informationen zur "WiW" finden sie <a class="color-link" href="https://www.wiw-marketing.de" target="_blank">hier</a>.
+                    </p>
+
+                    <br>
+
+                    <h3>
+                        „Wir in Wermelskirchen e.V.“ (WiW) unterstützt Berufsorientierung
+                    </h3>
+
+                    <br>
+
+                    <img src="assets/sgw-official/SchultourWiW (1).jpg" alt="" width="60%" height="60%">
+
+                    <br>
+
+                    <p>
+                        Am 29. September 2023 fand die Schultour des WiW für die Schülerinnen und Schüler der Jahrgangsstufe 10 statt. Ab dem 3. Block hatten sie die Möglichkeit, in drei Workshops, geleitet von Auszubildenden und Ausbildern lokaler Unternehmen, Einblicke in
+                        den Arbeitsalltag und die Tätigkeiten unterschiedlicher Berufsfelder zu gewinnen. Die kleinen Workshops boten auch den Rahmen, Fragen zu stellen, ins Gespräch zu kommen und Kontakte für das im Januar anstehende Schülerbetriebspraktikum
+                        zu schließen. Alles in allem war die Schultour ein voller Erfolg.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

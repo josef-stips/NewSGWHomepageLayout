@@ -51,7 +51,9 @@ const GeneralRouteMappings = [
     { route: 'ueber-mittag', router: 'ueberMittagRouter' },
     { route: 'unterrichtszeiten-und-stundentafel', router: 'unterrichtszeitenUndStundentafelRouter' },
     { route: 'urkunden-und-auszeichnungen', router: 'urkundenUndAuszeichnungenRouter' },
-    { route: 'wahlpflichtfaecher-89', router: 'wahlpflichtfächer89Router' }
+    { route: 'wahlpflichtfaecher-89', router: 'wahlpflichtfächer89Router' },
+    { route: 'sekundarstufe-i', router: 'sekundarstufe-i' },
+    { route: 'sekundarstufe-ii', router: 'sekundarstufe-ii' },
 ];
 
 // all faecher routes
