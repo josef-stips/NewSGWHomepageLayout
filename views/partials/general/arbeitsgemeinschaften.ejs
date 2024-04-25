@@ -1,10 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
+<style>
+     :root {
+        --table-bg: #f2f2f2;
+    }
+    
+    .termine-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    .termine-table td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    .termine-table tr:nth-child(even) {
+        background-color: var(--table-bg);
+    }
+    
+    .termine-table th {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    .termine-table tr td {
+        line-height: 2em;
+        text-align: start;
+        vertical-align: text-top;
+    }
+    
+    .dark-theme {
+        --table-bg: #424242;
+    }
+</style>
+
 <body>
-<h1>arbeitsgemeinschaften</h1>
+    <main class="main-content">
+        <h1>Arbeitsgemeinschaften</h1>
+
+        <h3>
+            AG-Vorstellungen:
+        </h3>
+
+        <table class="termine-table">
+            <tr>
+                <th>MINT</th>
+                <th>SPORT</th>
+                <th>KULTURELLES UND SOZIALES</th>
+            </tr>
+
+            <tr>
+                <td>
+                    Technik <br> <a href="/node/2318" class="color-link">Lernwerkstatt Naturwissenschaften</a>
+                </td>
+                <td>
+                    <a href="/sporthelfer" class="color-link">Sporthelfer</a><br> Volleyball
+                </td>
+                <td>
+                    <a href="/theater-ag" class="color-link">Theater-AG</a> <br>
+                    <a href="schulsanitaetsdienst" class="color-link">Schulsanitätsdienst</a><br> Joycing <br>
+                    <a href="/node/2164#2" class="color-link">Arbeitskreis Mediation</a><br>
+                    <a href="/node/2129" class="color-link">AG Diversity (auch "AG Vielfalt")</a><br>
+                    <a href="/arbeitsgemeinschaft-auschwitz" class="color-link">Vorbereitung auf Auschwitz-Fahrt</a><br>
+                    <a href="" class="color-link">Fair-Trade AG</a><br>
+                    <a href="" class="color-link">Schriftstellerei-AG</a><br>
+                </td>
+            </tr>
+        </table>
+
+        <hr align="center" width="95%">
+        <br>
+
+        <section style="text-align: center;">
+            <h2>Unsere AG-Angebote für dich:</h2>
+            <h4>Stand: 16.08.2023</h4>
+            <br>
+
+            <img src="assets/sgw-official/Download (21).png" alt="">
+            <img src="assets/sgw-official/Download (22).png" alt="">
+        </section>
+    </main>
 </body>
+
 </html>

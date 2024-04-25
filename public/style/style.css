@@ -116,6 +116,11 @@ a:hover {
 
 /* general mini classes */
 
+.round-image {
+    border-radius: 100%;
+    border: 5px solid var(--font-color);
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -135,7 +140,7 @@ a:hover {
     gap: 0.25em;
 }
 
-.info-text-box-big {
+b .info-text-box-big {
     color: var(--font-color);
 }
 
