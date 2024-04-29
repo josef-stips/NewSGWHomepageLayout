@@ -784,18 +784,6 @@ footer {
 }
 
 
-/* foerderverein */
-
-.Foerderverein-header-wrapper {
-    background-image: url("../assets/sgw-official/Download.png");
-    background-attachment: local;
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-clip: content-box;
-}
-
-
 /* animations */
 
 @keyframes fade {
