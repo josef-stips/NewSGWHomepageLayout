@@ -27,7 +27,7 @@ class App {
 
         } else if (localStorage.getItem("dark-theme") == "dark") {
             document.body.classList.add("dark-theme");
-        }
+        };
     };
 };
 

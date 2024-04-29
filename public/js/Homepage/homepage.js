@@ -57,3 +57,50 @@ function MainBoxesAnimation() {
         }, 100);
     }, 300);
 };
+
+// search function
+class search {
+    constructor() {
+
+    }
+
+    // on start
+    init = () => {
+        this.DOM_events();
+    };
+
+    // load event listener
+    DOM_events = () => {
+        searchButton.addEventListener("click", () => {
+            this.search("full");
+        });
+
+        searchInput.addEventListener("keyup", () => {
+
+        });
+    };
+
+    search = (display_type) => {
+        switch (display_type) {
+            case "dropdown":
+                this.dropdown_list();
+                break;
+
+            case "full":
+                this.full_display();
+                break;
+        };
+    };
+
+    dropdown_list = () => {
+
+    };
+
+    full_display = () => {
+        search_fullDisplay_Wrapper.style.display = "flex";
+        homepage_content.style.display = "none";
+    };
+};
+
+let searchInstance = new search();
+searchInstance.init();

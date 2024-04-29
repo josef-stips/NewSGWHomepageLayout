@@ -466,6 +466,13 @@ b .info-text-box-big {
 
 /* main body */
 
+.homepage_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
     height: max-content;
     width: 100%;
@@ -605,6 +612,15 @@ main {
     color: #e94592;
 }
 
+.responsive-img-container {
+    display: flow-root;
+    justify-items: center;
+}
+
+.responsive-img-container a img {
+    margin: 2em;
+}
+
 
 /* box grid */
 
@@ -664,15 +680,14 @@ main {
 
 footer {
     width: 100%;
-    height: 200px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     color: white;
     background-color: var(--font-color-reverse);
     color: var(--font-color);
-    padding-top: 2em;
     border-top: 2px solid var(--font-color);
-    padding: 55px 0 100px 0;
+    padding: 35px 0 100px 0;
     position: relative;
     z-index: 10;
 }
@@ -781,6 +796,13 @@ footer {
 .FaecherListMain {
     width: 90vw;
     height: 70vh;
+}
+
+
+/* search result wrapper  */
+
+.search_fullDisplay_Wrapper {
+    display: none;
 }
 
 
