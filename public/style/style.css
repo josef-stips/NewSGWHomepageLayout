@@ -15,6 +15,7 @@ body {
 :root {
     --font-color: #313131;
     --font-color-reverse: white;
+    --font-color-reverse-darker: rgb(199, 199, 199);
     --light-font-color: #171717;
     --hover-color: orange;
     --transition-time: 0.15s;
@@ -32,6 +33,7 @@ body {
 .dark-theme {
     --font-color: white;
     --font-color-reverse: #171717;
+    --font-color-reverse-darker: #202020;
     --light-font-color: rgb(255, 255, 255);
 }
 
@@ -354,6 +356,16 @@ b .info-text-box-big {
 
 .border {
     border: 2px solid var(--font-color);
+}
+
+.btn {
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.15s ease-in-out;
 }
 
 
@@ -799,10 +811,76 @@ footer {
 }
 
 
-/* search result wrapper  */
+/* search & result elements  */
 
 .search_fullDisplay_Wrapper {
     display: none;
+    width: 100%;
+    min-height: 25vh;
+    height: max-content;
+    flex-direction: column;
+}
+
+.search_fullDisplay_InnerWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.searchBar_DropDownList_Wrapper {
+    display: none;
+    flex-direction: column;
+    font-weight: 500;
+    height: max-content;
+    width: 250px;
+    background-color: var(--font-color-reverse-darker);
+    position: absolute;
+    left: 1.5em;
+    right: 0;
+    margin: 2.6em 0 0 0;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: -1;
+}
+
+.searchBar_DropDownList_Wrapper li {
+    border-top: 2px solid var(--font-color);
+}
+
+.searchBar_DropDownList_Wrapper li:first-child {
+    border-top: none;
+}
+
+.searchBox {
+    position: relative;
+}
+
+.search_fullDisplay_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+}
+
+.search_fullDisplay_list {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+    color: var(--font-color);
+}
+
+.search_fullDisplay_list li {
+    border-top: 2px solid var(--font-color);
+    line-height: 2em;
+}
+
+.search_fullDisplay_list li:first-child {
+    border-top: none;
 }
 
 

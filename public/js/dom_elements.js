@@ -20,3 +20,7 @@ let search_fullDisplay_Wrapper = document.querySelector(".search_fullDisplay_Wra
 let search_fullDisplay_InnerWrapper = document.querySelector(".search_fullDisplay_InnerWrapper");
 let search_fullDisplay_list = document.querySelector(".search_fullDisplay_list");
 let homepage_content = document.querySelector(".homepage_content");
+let searchBar_DropDownList_Wrapper = document.querySelector(".searchBar_DropDownList_Wrapper");
+let searchResults_dropDownList = document.querySelector(".searchResults_dropDownList");
+let closeResultsSectionBtn = document.querySelector(".closeResultsSectionBtn");
+let search_form = document.querySelector("#search_form");

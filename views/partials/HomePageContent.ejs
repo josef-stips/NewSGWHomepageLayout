@@ -28,18 +28,28 @@
         <div class="searchBarWrapper">
             <div class="searchBox">
 
-                <input class="searchInput" type="text" name="" placeholder="Suche nach...">
-                <button class="searchButton" href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
+                <form id="search_form">
 
+                    <input class="searchInput" type="text" name="" placeholder="Suche nach...">
+                    <button class="searchButton" href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <div class="searchBar_DropDownList_Wrapper">
+                    <ul class="searchResults_dropDownList">
+
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="search_fullDisplay_Wrapper">
 
             <div class="search_fullDisplay_header">
                 <h1 class="second-class-title">Suchergebnisse</h1>
+
+                <i class="fa-solid fa-x closeResultsSectionBtn btn"></i>
             </div>
 
             <div class="search_fullDisplay_InnerWrapper">
@@ -51,68 +61,68 @@
         </div>
 
         <div class="homepage_content">
-                <div class="grid-container main-box-grid" style="width: 100%;margin-bottom: 4em;">
+            <div class="grid-container main-box-grid" style="width: 100%;margin-bottom: 4em;">
 
-            <!-- box 1 - Neuigkeiten -->
-            <a href="/neues" class="box no-color-on-hover">
-                <h2 class="color-box-title">Neues</h2>
-                <h1 style="font-size: 100px;" class="fa-regular fa-newspaper"></h1>
-                <span>Entdecke was momentan im sgw passiert und werde Teil einer Bewegung</span>
-            </a>
+                <!-- box 1 - Neuigkeiten -->
+                <a href="/neues" class="box no-color-on-hover">
+                    <h2 class="color-box-title">Neues</h2>
+                    <h1 style="font-size: 100px;" class="fa-regular fa-newspaper"></h1>
+                    <span>Entdecke was momentan im sgw passiert und werde Teil einer Bewegung</span>
+                </a>
 
-            <!-- box 2 - anmeldung -->
-            <a href="/node/2249" class="box no-color-on-hover">
-                <h2 class="color-box-title">Anmeldung</h2>
-                <h1 style="font-size: 100px;" class="fa-solid fa-school"></h1>
-                <span>Melden sie ihr Kind jetzt an. Wir heißen sie herzlich Willkommen!</span>
-            </a>
+                <!-- box 2 - anmeldung -->
+                <a href="/node/2249" class="box no-color-on-hover">
+                    <h2 class="color-box-title">Anmeldung</h2>
+                    <h1 style="font-size: 100px;" class="fa-solid fa-school"></h1>
+                    <span>Melden sie ihr Kind jetzt an. Wir heißen sie herzlich Willkommen!</span>
+                </a>
 
-            <!-- box 3 - termine und berufsorientierung -->
-            <a href="/terminuebersicht" class="box no-color-on-hover">
-                <h2 class="color-box-title">Termine</h2>
-                <h1 style="font-size: 100px;" class="fa-regular fa-calendar-days"></h1>
-                <span>Finden sie hier wichtige Veranstaltungen/ Termine und Termine zur Berufsorientierung</span>
-            </a>
+                <!-- box 3 - termine und berufsorientierung -->
+                <a href="/terminuebersicht" class="box no-color-on-hover">
+                    <h2 class="color-box-title">Termine</h2>
+                    <h1 style="font-size: 100px;" class="fa-regular fa-calendar-days"></h1>
+                    <span>Finden sie hier wichtige Veranstaltungen/ Termine und Termine zur Berufsorientierung</span>
+                </a>
 
-            <!-- box 4 - Berufsorientierung -->
-            <a href="/node/2165" class="box no-color-on-hover">
-                <h2 class="color-box-title-large-text">Berufsorientierung</h2>
-                <h1 style="font-size: 100px;" class="fa-solid fa-list-check"></h1>
-                <span>Hier wirst du aufgeklärt... Keine Verwirrung mehr!</span>
-            </a>
+                <!-- box 4 - Berufsorientierung -->
+                <a href="/node/2165" class="box no-color-on-hover">
+                    <h2 class="color-box-title-large-text">Berufsorientierung</h2>
+                    <h1 style="font-size: 100px;" class="fa-solid fa-list-check"></h1>
+                    <span>Hier wirst du aufgeklärt... Keine Verwirrung mehr!</span>
+                </a>
 
-            <!-- box 5 - Fächer -->
-            <a href="/faecher" class="box no-color-on-hover">
-                <h2 class="color-box-title">F&auml;cher</h2>
-                <h1 style="font-size: 100px;" class="fa-solid fa-chalkboard-user"></h1>
-                <span>Erfahren sie hier etwas über unsere F&auml;cher und den entsprechenden Fachschaften/ Lehrern</span>
-            </a>
+                <!-- box 5 - Fächer -->
+                <a href="/faecher" class="box no-color-on-hover">
+                    <h2 class="color-box-title">F&auml;cher</h2>
+                    <h1 style="font-size: 100px;" class="fa-solid fa-chalkboard-user"></h1>
+                    <span>Erfahren sie hier etwas über unsere F&auml;cher und den entsprechenden Fachschaften/ Lehrern</span>
+                </a>
 
-            <!-- box 6 - Projektwoche -->
-            <a href="/node/2219" class="box no-color-on-hover">
-                <h2 class="color-box-title-large-text">Projektwochen</h2>
-                <h1 style="font-size: 100px;" class="fa-solid fa-users"></h1>
-                <span>Projektwoche - Verbinde Schule mit Freiheit und Kreativität, Zusammenhalt und Auszeit.</span>
-            </a>
+                <!-- box 6 - Projektwoche -->
+                <a href="/node/2219" class="box no-color-on-hover">
+                    <h2 class="color-box-title-large-text">Projektwochen</h2>
+                    <h1 style="font-size: 100px;" class="fa-solid fa-users"></h1>
+                    <span>Projektwoche - Verbinde Schule mit Freiheit und Kreativität, Zusammenhalt und Auszeit.</span>
+                </a>
 
-            <!-- box 7 - Schülervertretung -->
-            <a href="/schuelervertretung" class="box no-color-on-hover">
-                <h2 class="color-box-title-large-text">Schülervertretung</h2>
-                <h1 style="font-size: 100px;" class="fa-solid fa-user-tie"></h1>
-                <span>Die Schülervertretung kümmert vertritt die Schüler. Jeder kann mitmachen!</span>
-            </a>
+                <!-- box 7 - Schülervertretung -->
+                <a href="/schuelervertretung" class="box no-color-on-hover">
+                    <h2 class="color-box-title-large-text">Schülervertretung</h2>
+                    <h1 style="font-size: 100px;" class="fa-solid fa-user-tie"></h1>
+                    <span>Die Schülervertretung kümmert vertritt die Schüler. Jeder kann mitmachen!</span>
+                </a>
 
-            <!-- box 8 - Schulprogramm -->
-            <a href="/node/2153" class="box no-color-on-hover">
-                <h2 class="color-box-title-large-text">Schulprogramm</h2>
-                <h1 style="font-size: 100px;" class="fa-solid fa-briefcase"></h1>
-                <span>Gestaltung des Schullebens, Beratung, Betreuung, Kooperationen, Leistungsbewertung und vieles mehr.</span>
-            </a>
+                <!-- box 8 - Schulprogramm -->
+                <a href="/node/2153" class="box no-color-on-hover">
+                    <h2 class="color-box-title-large-text">Schulprogramm</h2>
+                    <h1 style="font-size: 100px;" class="fa-solid fa-briefcase"></h1>
+                    <span>Gestaltung des Schullebens, Beratung, Betreuung, Kooperationen, Leistungsbewertung und vieles mehr.</span>
+                </a>
 
-        </div>
+            </div>
 
-        <br>
-        <hr width="95%">
+            <br>
+            <hr width="95%">
             <br>
             <h1 class="second-class-title">Möchten sie einen Schulrundgang machen?</h1> <br>
             <a target="_blank" href="https://view.genial.ly/6345515e55c2cc0018edb6e7/interactive-image-sgw">
@@ -132,7 +142,7 @@
                     <a target="_blank" href="https://www.land.nrw/niewiederistjetzt">
                         <img src="assets/sgw-official/Ari.png" alt="#nie wieder ist jetzt nrw" width="170" height="170" style="border-radius: 50%;" class="border">
                     </a>
-                    
+
                     <a target="_blank" href="https://www.land.nrw/niewiederistjetzt">
                         <img src="assets/sgw-official/PdV.jpg" alt="#nie wieder ist jetzt nrw" width="170" style="border-radius: 50%;" class="border">
                     </a>
@@ -147,84 +157,84 @@
                 </div>
             </div>
 
-        <br>
-        <hr width="95%">
+            <br>
+            <hr width="95%">
 
-        <br>
-        <div>
-            <h2 class="second-class-title">Erreichbarkeit der Schule per E-Mail</h2>
+            <br>
+            <div>
+                <h2 class="second-class-title">Erreichbarkeit der Schule per E-Mail</h2>
 
-            <div class="sub-div">
-                Zur Zeit ist das Sekretariat nur unter der Adresse sekretariat(at)sgw-dienst.de Die telefonische Erreichbarkeit ist weiterhin gegeben.
-            </div>
-        </div>
-
-        <br>
-        <hr width="95%">
-
-        <h1>Aktuell wichtiges</h1>
-
-        <div>
-            <h2 class="second-class-title">Neues</h2>
-
-            <div class="sub-div">
-                <article id="newest-article">
-                    <h2>SGW ist Partnerschule des Volleyballs</h2>
-                    <br>
-                    <img src="assets/sgw-official/Partnerschule_Volleyball.jpg" width="600px" height="400px">
-
-                    <br> <br>
-                    <p>
-                        Am Dienstag, dem 12.03.2024, wurde die Zusammenarbeit zwischen unserem Gymnasium und dem Turnerbund Groß-Oesinghausen in einer Feierstunde besiegelt.
-                    </p>
-                    <br>
-                    <p>
-                        Aus der Presse:
-                    </p>
-                    <br>
-                    <p>
-                        Von Theresa Demski <br> Wer am Gymnasium im Sportunterricht sein Talent auf dem Volleyballfeld zeigt, hat künftig viele Möglichkeiten: Dank einer Kooperation mit dem Turnerbund Groß-Ösinghausen (TGÖ) und dem Zertifikat „Partnerschule
-                        des Volleyballs“ können die Schüler frühzeitig in den Leistungssport einsteigen.
-                    </p>
-                    <br>
-                    <p>
-                        Am Dienstagnachmittag setzten dafür Vertreter der Schule, des Vereins, der Städte und der Kreis- und Landessportverbände ihre Unterschriften unter den entscheidenden Vertrag. Schon seit zehn Jahren wird in der Sportschulhalle am Gymnasium auf dem Weg
-                        zum Abitur Volleyball gespielt. Stellte sich dabei allerdings heraus, dass sich ein Jugendlicher besonders gut auf dem Feld macht, hatte er meist wenige Möglichkeiten. Der nächste Verein, um ambitioniert auch jenseits des Stundenplans
-                        Volleyball zu spielen, wartete in Remscheid.
-                    </p>
-                    <br>
-                    <p>
-                        „Und dann haben wir uns gegenseitig offene Türen eingerannt“, erzählte Rainer Pentzek, Geschäftsführer des Turnerbunds im benachbarten Burscheid. Der Sportverein war auf der Suche nach ambitionierten jungen Volleyballern. Und das Gymnasium suchte eine
-                        Möglichkeit, um ihren Schülern auch jenseits des Unterrichts unkompliziert Volleyballtraining zugänglich zu machen. Im vergangenen Jahr fanden beide zusammen – der Verein zählt heute 70 statt 30 Mitglieder in der Volleyballabteilung
-                        und das Gymnasium feiert Erfolge mit den jungen Sportlern auf Kreis-, Landes- und Bundesebene.
-                    </p>
-                    <br>
-                    <p>
-                        „Heute können unsere Schüler vier Mal in der Woche trainieren, wenn sie wollen“, rechnet Lehrer Christian Ovelhey, der sich um Kooperation und Zertifikat bemüht hat. Wer sich in der AG, in der bis zu 40 Schüler mitmachen, gut anstellt, wird zum innerschulischen
-                        Talenttraining eingeladen – um hier mehr als nur Grundlagen zu lernen. Und von hier aus finden dann viele den Weg zum TGÖ.
-                    </p>
-                    <br>
-                    <p>
-                        „Im vergangenen Jahr haben wir im TGÖ eine neue Männermannschaft aufgebaut, in der auch viele von uns Schülern dabei sind“, erzählt Elftklässer Elias Burghoff, der sich über die neuen sportlichen Möglichkeiten freut. „Die Wege sind kurz, wir bekommen
-                        alle Infos und Unterstützung“, lobt der Schüler. Die Mädchen hinken noch etwas hinterher. „Aber wir hoffen, dass für uns auch bald eine eigene Mannschaft gegründet wird“, sagt Lynn Granz.
-                    </p>
-                    <br>
-                    <p>
-                        Die Kooperation wird nun noch geadelt durch das Zertifikat „Partnerschule des Volleyballs“ – als erste und einzige Schule im Rheinisch-Bergischen Kreis. „Das macht vor allem die Übergänge leichter und verschafft uns Zugang zu Weiterbildungsmöglichkeiten
-                        und Lehrgängen“, erklärt Ovelhey. Mit „Übergängen“ meint er auch die Wege für ambitionierte Schüler, die Richtung Nationalmannschaft und Olympia denken. Dank des Zertifikats sind die Partner des Westdeutschen Volleyballverbandes
-                        nur einen Anruf entfernt.
-                    </p>
-                    <br>
-                    <p>
-                        Quelle: Rheinische Post vom 12.03.2024
-                    </p>
-                </article>
+                <div class="sub-div">
+                    Zur Zeit ist das Sekretariat nur unter der Adresse sekretariat(at)sgw-dienst.de Die telefonische Erreichbarkeit ist weiterhin gegeben.
+                </div>
             </div>
 
-            <br><br> <br>
+            <br>
+            <hr width="95%">
 
-            <a class="color-link" target="_self" href="/Neues">weiterlesen...</a>
-        </div>
+            <h1>Aktuell wichtiges</h1>
+
+            <div>
+                <h2 class="second-class-title">Neues</h2>
+
+                <div class="sub-div">
+                    <article id="newest-article">
+                        <h2>SGW ist Partnerschule des Volleyballs</h2>
+                        <br>
+                        <img src="assets/sgw-official/Partnerschule_Volleyball.jpg" width="600px" height="400px">
+
+                        <br> <br>
+                        <p>
+                            Am Dienstag, dem 12.03.2024, wurde die Zusammenarbeit zwischen unserem Gymnasium und dem Turnerbund Groß-Oesinghausen in einer Feierstunde besiegelt.
+                        </p>
+                        <br>
+                        <p>
+                            Aus der Presse:
+                        </p>
+                        <br>
+                        <p>
+                            Von Theresa Demski <br> Wer am Gymnasium im Sportunterricht sein Talent auf dem Volleyballfeld zeigt, hat künftig viele Möglichkeiten: Dank einer Kooperation mit dem Turnerbund Groß-Ösinghausen (TGÖ) und dem Zertifikat „Partnerschule
+                            des Volleyballs“ können die Schüler frühzeitig in den Leistungssport einsteigen.
+                        </p>
+                        <br>
+                        <p>
+                            Am Dienstagnachmittag setzten dafür Vertreter der Schule, des Vereins, der Städte und der Kreis- und Landessportverbände ihre Unterschriften unter den entscheidenden Vertrag. Schon seit zehn Jahren wird in der Sportschulhalle am Gymnasium auf dem Weg
+                            zum Abitur Volleyball gespielt. Stellte sich dabei allerdings heraus, dass sich ein Jugendlicher besonders gut auf dem Feld macht, hatte er meist wenige Möglichkeiten. Der nächste Verein, um ambitioniert auch jenseits des Stundenplans
+                            Volleyball zu spielen, wartete in Remscheid.
+                        </p>
+                        <br>
+                        <p>
+                            „Und dann haben wir uns gegenseitig offene Türen eingerannt“, erzählte Rainer Pentzek, Geschäftsführer des Turnerbunds im benachbarten Burscheid. Der Sportverein war auf der Suche nach ambitionierten jungen Volleyballern. Und das Gymnasium suchte eine
+                            Möglichkeit, um ihren Schülern auch jenseits des Unterrichts unkompliziert Volleyballtraining zugänglich zu machen. Im vergangenen Jahr fanden beide zusammen – der Verein zählt heute 70 statt 30 Mitglieder in der Volleyballabteilung
+                            und das Gymnasium feiert Erfolge mit den jungen Sportlern auf Kreis-, Landes- und Bundesebene.
+                        </p>
+                        <br>
+                        <p>
+                            „Heute können unsere Schüler vier Mal in der Woche trainieren, wenn sie wollen“, rechnet Lehrer Christian Ovelhey, der sich um Kooperation und Zertifikat bemüht hat. Wer sich in der AG, in der bis zu 40 Schüler mitmachen, gut anstellt, wird zum innerschulischen
+                            Talenttraining eingeladen – um hier mehr als nur Grundlagen zu lernen. Und von hier aus finden dann viele den Weg zum TGÖ.
+                        </p>
+                        <br>
+                        <p>
+                            „Im vergangenen Jahr haben wir im TGÖ eine neue Männermannschaft aufgebaut, in der auch viele von uns Schülern dabei sind“, erzählt Elftklässer Elias Burghoff, der sich über die neuen sportlichen Möglichkeiten freut. „Die Wege sind kurz, wir bekommen
+                            alle Infos und Unterstützung“, lobt der Schüler. Die Mädchen hinken noch etwas hinterher. „Aber wir hoffen, dass für uns auch bald eine eigene Mannschaft gegründet wird“, sagt Lynn Granz.
+                        </p>
+                        <br>
+                        <p>
+                            Die Kooperation wird nun noch geadelt durch das Zertifikat „Partnerschule des Volleyballs“ – als erste und einzige Schule im Rheinisch-Bergischen Kreis. „Das macht vor allem die Übergänge leichter und verschafft uns Zugang zu Weiterbildungsmöglichkeiten
+                            und Lehrgängen“, erklärt Ovelhey. Mit „Übergängen“ meint er auch die Wege für ambitionierte Schüler, die Richtung Nationalmannschaft und Olympia denken. Dank des Zertifikats sind die Partner des Westdeutschen Volleyballverbandes
+                            nur einen Anruf entfernt.
+                        </p>
+                        <br>
+                        <p>
+                            Quelle: Rheinische Post vom 12.03.2024
+                        </p>
+                    </article>
+                </div>
+
+                <br><br> <br>
+
+                <a class="color-link" target="_self" href="/Neues">weiterlesen...</a>
+            </div>
         </div>
     </div>
 

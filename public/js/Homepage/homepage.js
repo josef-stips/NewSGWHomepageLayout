@@ -60,9 +60,9 @@ function MainBoxesAnimation() {
 
 // search function
 class search {
-    constructor() {
-
-    }
+    constructor(baseURL) {
+        this.baseURL = baseURL
+    };
 
     // on start
     init = () => {
@@ -71,36 +71,102 @@ class search {
 
     // load event listener
     DOM_events = () => {
-        searchButton.addEventListener("click", () => {
-            this.search("full");
+        searchInput.addEventListener("input", (e) => {
+            let text = searchInput.value;
+            let charlength = searchInput.value.length;
+            let close = true;
+
+            if (charlength >= 1) {
+                close = false;
+
+                // get result
+                this.get_results(text, this.baseURL, searchResults_dropDownList);
+            };
+
+            this.search("dropdown", close, text);
         });
 
-        searchInput.addEventListener("keyup", () => {
+        closeResultsSectionBtn.addEventListener("click", () => {
+            search_fullDisplay_Wrapper.style.display = "none";
+            homepage_content.style.display = "flex";
 
+            searchInput.value = null;
+        });
+
+        search_form.addEventListener("submit", (e) => {
+            let text = searchInput.value;
+
+            // close and prevent
+            e.preventDefault();
+            this.search("dropdown", true, text);
+
+            // user typed characters
+            if (searchInput.value != 0) {
+                // display result area
+                this.search("full", false, text);
+
+                // get result
+                this.get_results(text, this.baseURL, search_fullDisplay_list);
+            };
         });
     };
 
-    search = (display_type) => {
+    search = (display_type, close, text) => {
         switch (display_type) {
             case "dropdown":
-                this.dropdown_list();
+                this.dropdown_list(close, text);
                 break;
 
             case "full":
-                this.full_display();
+                this.full_display(text);
                 break;
         };
     };
 
-    dropdown_list = () => {
+    get_results = async(text, baseURL, parent_list) => {
 
+        await fetch(baseURL + `/search/${text}`, {
+            method: 'GET'
+        })
+
+        .catch(reason => {
+            console.log(reason);
+        })
+
+        .then(async(res) => {
+            const data = await res.json();
+            this.display_results(data, parent_list);
+        })
     };
 
-    full_display = () => {
+    dropdown_list = (close, text) => {
+        searchBar_DropDownList_Wrapper.style.display = !close ? "flex" : "none";
+    };
+
+    full_display = (text) => {
         search_fullDisplay_Wrapper.style.display = "flex";
         homepage_content.style.display = "none";
     };
+
+    display_results = (data, parent_list) => {
+        parent_list.textContent = null; // reset
+
+        if (data.length > 0) {
+
+            for (const i of data) {
+                let li = document.createElement("li");
+                li.textContent = i["route"];
+
+                parent_list.appendChild(li);
+            };
+
+        } else { // display replace text
+            let replaceText = document.createElement("p");
+            replaceText.textContent = "Nichts gefunden!"
+            parent_list.appendChild(replaceText);
+        };
+    };
 };
 
-let searchInstance = new search();
+let searchInstance = new search("http://localhost:8080");
 searchInstance.init();

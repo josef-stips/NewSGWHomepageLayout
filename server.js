@@ -1,5 +1,6 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
+const searchHandler = require("./scripts/searchHandler.js");
 
 // set up
 const app = express();
@@ -103,6 +104,17 @@ app.get('', (req, res) => {
         title: "Städtisches Gymnasium Wermelskirchen",
         pageheaderstyle: "main-page-header-style"
     });
+});
+
+// user wants to search something
+app.get('/search/:search_request', async(req, res) => {
+    const { search_request } = req.params; // text the user typed in the search bar
+    console.log(search_request);
+
+    let results = searchHandler.search(search_request);
+    console.log(results);
+
+    res.json(results);
 });
 
 // set up 404 page
