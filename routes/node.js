@@ -138,8 +138,7 @@ NodeRoutes.forEach((route, i) => {
         router.get(`/${route}`, (req, res) => {
             res.render("layout", {
                 title: `${NodeTitles[i]} | Städtisches Gymnasium Wermelskirchen`,
-                mainContent: '../views/partials/general/faecher.ejs',
-                fachContent: '../nodes/node_2609.ejs',
+                mainContent: '../views/partials/nodes/node_2609.ejs',
             });
         });
 

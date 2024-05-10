@@ -114,7 +114,6 @@ app.get('/search/:search_request', async(req, res) => {
     let searchEngine = new SearchEngine(search_request)
     let results = searchEngine.search();
 
-    console.log("from server.js: ", results);
     res.json(results);
 });
 
