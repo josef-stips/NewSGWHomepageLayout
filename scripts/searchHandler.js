@@ -1,56 +1,75 @@
 const fs = require('fs');
 const path = require('path');
 const { compareTwoStrings } = require('string-similarity');
+const { JSDOM } = require('jsdom');
 
-// Funktion zum Extrahieren von Informationen aus Routen
-function extractRouteInfo(file, routeFile) {
-    const content = fs.readFileSync(routeFile, 'utf-8');
-    // Hier implementierst du die Logik, um relevante Informationen aus der Datei zu extrahieren
-    // Zum Beispiel könntest du h2-Titel extrahieren
-    return [file]; // Beispielwerte
+class SearchEngine {
+    constructor(query) {
+        this.query = query;
+    };
+
+    extractRouteInfo(file, routeFile) {
+        const content = fs.readFileSync(routeFile, 'utf-8');
+        const dom = new JSDOM(content);
+        const titleElements = dom.window.document.querySelectorAll("h1");
+        let firstTitleText;
+
+        if (titleElements.length > 0) {
+            firstTitleText = titleElements[0].textContent;
+
+        } else {
+            firstTitleText = file;
+        };
+
+        return [firstTitleText];
+    };
+
+    calculateSimilarity(query, contentTitle) {
+        return compareTwoStrings(query.toUpperCase(), contentTitle.toUpperCase());
+    };
+
+    modifyResults(results) {
+        results = results.filter(a => a.similarity > 0.225);
+        results.sort((a, b) => b.similarity - a.similarity);
+        return results;
+    };
+
+    getFiles() {
+        const routesFolder = path.join(__dirname, "../views/partials/faecher");
+        const routesFolder2 = path.join(__dirname, "../views/partials/general");
+        const routesFolder3 = path.join(__dirname, "../views/partials/nodes");
+
+        const files = {
+            [routesFolder]: fs.readdirSync(routesFolder),
+            [routesFolder2]: fs.readdirSync(routesFolder2),
+            [routesFolder3]: fs.readdirSync(routesFolder3)
+        };
+
+        return files;
+    };
+
+    search(query = this.query) {
+        let results = [];
+        let files = this.getFiles();
+
+        for (let key in files) {
+            files[key].map(file => {
+                let fileName = file.replace(".ejs", "");
+
+                if (fileName.includes("node")) {
+                    fileName = fileName.replace("_", "/");
+                };
+
+                const routeFile = path.join(key, file);
+                const [title] = this.extractRouteInfo(fileName, routeFile);
+                const similarity = this.calculateSimilarity(query, title);
+
+                results.push({ name: title, route: fileName, similarity });
+            });
+        };
+
+        return this.modifyResults(results);
+    };
 };
 
-// Funktion zur Berechnung der Textähnlichkeit
-function calculateSimilarity(query, routeInfo) {
-    console.log(query, routeInfo);
-
-    // Hier könntest du eine Textähnlichkeitsmetrik wie Levenshtein-Distanz verwenden
-    // Du könntest auch andere Metriken verwenden, die besser zu deinen Anforderungen passen
-    return compareTwoStrings(query, routeInfo[0]);
-};
-
-// Funktion zur Durchführung der Suche
-function search(query) {
-    const routesFolder = path.join(__dirname, "../views/partials/faecher");
-    let results = [];
-
-    // Lese alle Dateien im angegebenen Ordner aus
-    const files = fs.readdirSync(routesFolder);
-
-    console.log(files);
-
-    // Iteriere über alle Dateien im Ordner
-    files.forEach(file => {
-        let fileName = file.replace(".ejs", "");
-
-        // Konstruiere den vollständigen Pfad zur Datei
-        const routeFile = path.join(routesFolder, file);
-        // Extrahiere Informationen aus der Datei
-        const routeInfo = extractRouteInfo(fileName, routeFile);
-        // Berechne die Ähnlichkeit und füge das Ergebnis hinzu
-        const similarity = calculateSimilarity(query, routeInfo);
-        results.push({ route: fileName, similarity });
-    });
-
-    console.log(results);
-
-    // Sortiere die Ergebnisse nach Ähnlichkeit in aufsteigender Reihenfolge
-    results = results.filter(a => a.similarity > 0.20);
-    results.sort((a, b) => b.similarity - a.similarity);
-
-    return results;
-};
-
-module.exports = {
-    search
-};
+module.exports = SearchEngine;

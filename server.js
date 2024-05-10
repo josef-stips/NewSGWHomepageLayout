@@ -1,6 +1,6 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
-const searchHandler = require("./scripts/searchHandler.js");
+const SearchEngine = require("./scripts/searchHandler.js");
 
 // set up
 const app = express();
@@ -22,7 +22,7 @@ const ImpressumRouter = require("./routes/impressum.js");
 const NeuesRouter = require("./routes/Neues.js");
 const IVKRouter = require("./routes/general_routes/ivk.js");
 const FachbuchRouter = require("./routes/general_routes/fachbuch.js");
-const ArbeitsgemeinschaftAuschwitz = require("./routes/general_routes/subs/arbeitsgemeinschaft-auschwitz.js")
+const ArbeitsgemeinschaftAuschwitz = require("./routes/general_routes/arbeitsgemeinschaft-auschwitz.js");
 
 app.use('/leitungverwaltung', LeitungVerwaltungRouter);
 app.use('/node', NodeRouter);
@@ -111,9 +111,10 @@ app.get('/search/:search_request', async(req, res) => {
     const { search_request } = req.params; // text the user typed in the search bar
     console.log(search_request);
 
-    let results = searchHandler.search(search_request);
-    console.log(results);
+    let searchEngine = new SearchEngine(search_request)
+    let results = searchEngine.search();
 
+    console.log("from server.js: ", results);
     res.json(results);
 });
 

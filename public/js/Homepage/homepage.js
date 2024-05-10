@@ -62,6 +62,8 @@ function MainBoxesAnimation() {
 class search {
     constructor(baseURL) {
         this.baseURL = baseURL
+        this.timerId;
+        this.waitTime = 500;
     };
 
     // on start
@@ -72,15 +74,31 @@ class search {
     // load event listener
     DOM_events = () => {
         searchInput.addEventListener("input", (e) => {
+            clearTimeout(this.timerId);
+            this.timerId = null;
+
             let text = searchInput.value;
             let charlength = searchInput.value.length;
             let close = true;
 
+            SearchResults_for_title.textContent = `Suchergebnisse für "${text}"`;
+
             if (charlength >= 1) {
                 close = false;
 
-                // get result
-                this.get_results(text, this.baseURL, searchResults_dropDownList);
+                this.timerId = setTimeout(() => {
+                    // get result after user didn't type for a time
+                    this.full_display();
+
+                    // activate spinner
+                    this.spinner(true);
+
+                    this.get_results(text, this.baseURL, search_fullDisplay_list);
+                }, this.waitTime);
+
+            } else {
+                search_fullDisplay_Wrapper.style.display = "none";
+                homepage_content.style.display = "flex";
             };
 
             this.search("dropdown", close, text);
@@ -91,6 +109,7 @@ class search {
             homepage_content.style.display = "flex";
 
             searchInput.value = null;
+            this.search("dropdown", true, null);
         });
 
         search_form.addEventListener("submit", (e) => {
@@ -104,6 +123,9 @@ class search {
             if (searchInput.value != 0) {
                 // display result area
                 this.search("full", false, text);
+
+                // activate spinner
+                this.spinner(true);
 
                 // get result
                 this.get_results(text, this.baseURL, search_fullDisplay_list);
@@ -129,14 +151,36 @@ class search {
             method: 'GET'
         })
 
-        .catch(reason => {
-            console.log(reason);
-        })
+        .catch(reason => console.log(reason))
 
         .then(async(res) => {
             const data = await res.json();
             this.display_results(data, parent_list);
         })
+    };
+
+    spinner = (status) => {
+        search_fullDisplay_list.textContent = null;
+
+        switch (status) {
+            case true:
+                let spinnerWrapper = document.createElement("div");
+                let spinner = document.createElement("i");
+
+                spinnerWrapper.className = "spinnerWrapper";
+                spinner.className = "fa-solid fa-spinner loadingSpinner";
+                spinner.style.animation = "spinnerAni 2s ease infinite";
+
+                spinnerWrapper.appendChild(spinner)
+                search_fullDisplay_list.appendChild(spinnerWrapper);
+                break;
+
+            case false:
+                let loadingSpinner = document.querySelector(".spinnerWrapper");
+                loadingSpinner && loadingSpinner.remove();
+                search_fullDisplay_Wrapper.style.height = "max-content";
+                break;
+        };
     };
 
     dropdown_list = (close, text) => {
@@ -149,14 +193,18 @@ class search {
     };
 
     display_results = (data, parent_list) => {
+        this.spinner(false);
         parent_list.textContent = null; // reset
 
         if (data.length > 0) {
 
             for (const i of data) {
                 let li = document.createElement("li");
-                li.textContent = i["route"];
+                let a = document.createElement("a");
+                a.textContent = i["name"];
+                a.href = `/${i["route"]}`;
 
+                li.appendChild(a);
                 parent_list.appendChild(li);
             };
 

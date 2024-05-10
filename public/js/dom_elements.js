@@ -24,3 +24,4 @@ let searchBar_DropDownList_Wrapper = document.querySelector(".searchBar_DropDown
 let searchResults_dropDownList = document.querySelector(".searchResults_dropDownList");
 let closeResultsSectionBtn = document.querySelector(".closeResultsSectionBtn");
 let search_form = document.querySelector("#search_form");
+let SearchResults_for_title = document.querySelector(".SearchResults_for_title");
